@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5053" systemVersion="13A603" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserShiftDetailCell" id="KGk-i7-Jjw" customClass="UserShiftDetailCell">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="200" height="49"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbA-dW-jwO">
+                        <rect key="frame" x="15" y="14" width="170" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="s6N-LM-Tv3"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="soz-k8-qCc">
+                        <rect key="frame" x="0.0" y="45" width="200" height="1"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="U7o-fs-GzL"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="soz-k8-qCc" secondAttribute="trailing" id="5S6-T2-HIh"/>
+                    <constraint firstAttribute="trailing" secondItem="soz-k8-qCc" secondAttribute="trailing" id="8SR-Je-Ul3"/>
+                    <constraint firstItem="soz-k8-qCc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Jv1-fT-BBM"/>
+                    <constraint firstAttribute="trailing" secondItem="xbA-dW-jwO" secondAttribute="trailing" constant="15" id="LSe-Kj-tFM"/>
+                    <constraint firstItem="xbA-dW-jwO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="a88-rz-UnQ"/>
+                    <constraint firstAttribute="bottom" secondItem="soz-k8-qCc" secondAttribute="bottom" constant="3" id="clu-cO-7Af"/>
+                    <constraint firstItem="soz-k8-qCc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="f34-ir-OF7"/>
+                    <constraint firstItem="soz-k8-qCc" firstAttribute="top" secondItem="xbA-dW-jwO" secondAttribute="bottom" constant="10" id="gjE-ja-Sf3"/>
+                    <constraint firstItem="xbA-dW-jwO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="rGo-zD-GLm"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="lblUserName" destination="xbA-dW-jwO" id="oaZ-Yh-SJB"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

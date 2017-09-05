@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserActivationViewController">
+            <connections>
+                <outlet property="btnBack" destination="3W2-Xq-Ho1" id="AOr-L0-VpB"/>
+                <outlet property="txtpassword" destination="Poc-pj-GJz" id="eDo-dc-SDJ"/>
+                <outlet property="txtusername" destination="tLv-27-6w5" id="5N5-fL-DvF"/>
+                <outlet property="view" destination="iN0-l3-epB" id="50b-CS-q2n"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DashboardBG.png" id="ywz-CO-bPY">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3W2-Xq-Ho1" userLabel="Button - Back">
+                    <rect key="frame" x="5" y="24" width="40" height="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <inset key="imageEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" image="back_icon_iphone.png"/>
+                    <state key="selected" image="back_icon_selected_iphone.png"/>
+                    <state key="highlighted" image="back_icon_selected_iphone.png"/>
+                    <connections>
+                        <action selector="backtoDashboard:" destination="-1" eventType="touchUpInside" id="2SY-5a-LXe"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" id="9UO-Sj-IJ6" userLabel="password">
+                    <rect key="frame" x="79" y="223" width="1" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.71764705880000002" green="0.7843137255" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="password_icon.png" id="6UL-7s-IT8" userLabel="password">
+                    <rect key="frame" x="55" y="225" width="12" height="15"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="email_icon.png" id="ceQ-Ti-flY" userLabel="Email">
+                    <rect key="frame" x="55" y="162" width="15" height="15"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </imageView>
+                <view contentMode="scaleToFill" id="u7l-2b-9TT" userLabel="email">
+                    <rect key="frame" x="79" y="160" width="1" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.71764705880000002" green="0.7843137255" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rcdLoginTextBg.png" id="rP3-uK-mM5">
+                    <rect key="frame" x="40" y="150" width="240" height="45"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="EMAIL OR USER ID" minimumFontSize="17" id="tLv-27-6w5" userLabel="Text Field - Email or User ID">
+                    <rect key="frame" x="85" y="150" width="190" height="40"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="13e-PB-D8p"/>
+                    </connections>
+                </textField>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rcdLoginTextBg.png" id="fu2-uA-afP">
+                    <rect key="frame" x="40" y="210" width="240" height="45"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="PASSWORD" minimumFontSize="17" id="Poc-pj-GJz" userLabel="Text Field - Password">
+                    <rect key="frame" x="85" y="210" width="190" height="40"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="VNY-6P-gBI"/>
+                    </connections>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4Eu-lU-dZ3" userLabel="Button - Sign In">
+                    <rect key="frame" x="40" y="285" width="240" height="50"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.050980392159999999" green="0.12941176469999999" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="SIGN IN">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnSignInClicked:" destination="-1" eventType="touchUpInside" id="ybW-sU-Lnl"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rapidnew_logo_white.png" id="HpE-1M-msL">
+                    <rect key="frame" x="40" y="50" width="240" height="55"/>
+
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+            <nil key="simulatedStatusBarMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="DashboardBG.png" width="750" height="1334"/>
+        <image name="back_icon_iphone.png" width="17" height="12"/>
+        <image name="back_icon_selected_iphone.png" width="17" height="12"/>
+        <image name="email_icon.png" width="15" height="15"/>
+        <image name="password_icon.png" width="10" height="14"/>
+        <image name="rapidnew_logo_white.png" width="262" height="60"/>
+        <image name="rcdLoginTextBg.png" width="377" height="48"/>
+    </resources>
+</document>

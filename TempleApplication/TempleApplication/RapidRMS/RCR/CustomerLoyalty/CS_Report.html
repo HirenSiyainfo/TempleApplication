@@ -1,0 +1,204 @@
+<!doctype html>
+<html>
+<head>
+<title>Untitled Document</title>
+
+
+
+
+<style type="text/css">
+        html {
+            font-family: "Open Sans",sans-serif;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .Title1 {
+            border-bottom: 3px solid #5b9bd5;
+            font-size: medium;
+            padding-bottom: 4px;
+            color: #44546a;
+            float: left;
+        }
+
+        .Title2 {
+            border-bottom: 3px solid #9bc2e6;
+            font-size: medium;
+            padding-bottom: 4px;
+            color: #44546a;
+            float: left;
+            text-align: left;
+        }
+
+        .Title3 {
+            border-bottom: 3px solid #9bc2e6;
+            font-size: medium;
+            padding-bottom: 4px;
+            color: #44546a;
+            float: right;
+            text-align: right;
+        }
+
+        .tableColTitle th {
+            font-size: smaller;
+            border-bottom: 0.5px solid #808080;
+        }
+
+        .RowBr tr td {
+            font-size: small;
+           
+        }
+
+        .mainLabelPrint {
+           
+            overflow: hidden;
+            height: 98px;
+            padding: 10px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            font-size: 11px;
+            text-transform: uppercase;
+        }
+
+        .TitleLabelPrint {
+            float: left;
+            font-family: 'seguibl';
+            color: #CD5B47;
+            font-weight: bold;
+            font-size: 12px;
+            letter-spacing: 1px;
+            line-height: 19px;
+            padding-bottom: 5px;
+            width: 100%;
+        }
+
+        .PriceLabelPrint {
+            float: left;
+            font-size: 11px;
+            color: #CD5B47;
+            line-height: 32px;
+            padding-bottom: 5px;
+            width: 100%;
+        }
+
+        .DesLabelPrint {
+            font-size: 10px;
+            margin: 0px;
+            color: #6D6E70;
+            line-height: 12px;
+            font-family: arial;
+            font-weight: normal;
+            text-transform: lowercase;
+            width: 100%;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+
+
+
+
+<table   border="0" cellspacing="0" cellpadding="3" style="width:100% ;margin-bottom:20px;font-size:smaller;">
+    <tbody>
+        <tr>
+            <td class="Title1"  style="width:100%;" >
+                CS_REPORT_NAME
+                <br />
+                CUSTOMER_NAME
+            </td>
+        </tr>
+      
+       
+    </tbody>
+</table>
+<table  border="0" cellspacing="0" cellpadding="3" style="width:100% ; margin-bottom:20px;font-size:smaller;">
+    <tbody>
+        
+        <tr>
+            <td  style="padding-top:15px; width:240px">Report Type</td>
+            <td  style="padding-top:15px; width:740px">REPORT_TYPE</td>
+
+        </tr>
+        <tr>
+            <td>From:</td>
+            <td>FROM_DATE</td>
+        </tr>
+        <tr>
+            <td>To: </td>
+            <td>TO_DATE</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<table  border="0" cellspacing="0" cellpadding="3"  style = "width:100%; margin-bottom: 20px; color: #44546a; font-size: smaller;">
+    <tbody>
+        <tr>
+            <td class="Title1"  style="width:100%">
+                Report Details
+            </td>
+        </tr>
+      
+       
+    </tbody>
+</table>
+
+<table  id="tblSalesFilterGridpdf" border="0" cellspacing="0" cellpadding="6" style="width:100% ; margin-bottom: 20px; color: #44546a; font-size: smaller;">
+    <tbody>
+       
+        <tr>
+            <td >
+                <table   border="0" cellspacing="0" cellpadding="5" style="width:100% ; color:#000;" class="RowBr">
+                    <thead>
+                        <tr>
+                            <th colspan="4" style="line-height:10px;">&nbsp;</th>
+                        </tr>
+                        <tr  style="height: 42px;" class="">
+                          
+                          CUSTOMER_SALES_HEADER_TITLES
+<!--                                <th style="text-align: left;">Invoice #</th>-->
+<!--                  -->
+<!--                                <th style="text-align: left;">Discount Received</th>-->
+<!--                          -->
+<!--                                <th style="text-align: left;">Vendor</th>-->
+<!--                       -->
+<!--                                <th style="text-align: left;">Department</th>-->
+
+                        </tr>
+                       
+
+
+                    </thead>
+                    
+                     <tbody>
+                        
+                        CUSTOMER_SALES_HEADER_DETAILS
+<!--                        <tr style="font-size:17px">-->
+
+<!--                          -->
+
+<!--                                <td style="text-align: left;">Invoice #</td>-->
+<!--                  -->
+<!--                                <td style="text-align: left;">Discount Received</td>-->
+<!--                          -->
+<!--                                <td style="text-align: left;">Vendor</td>-->
+<!--                       -->
+<!--                                <td style="text-align: left;">Department</td>-->
+<!--                        </tr>-->
+
+                    </tbody>
+                    
+                </table>
+
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+</body>
+</html>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5063" systemVersion="13A603" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Configuration" representedClassName="Configuration" syncable="YES">
+        <attribute name="invoiceNo" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="lastUpdateDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="masterUpdateDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="regPrefixNo" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Department" representedClassName="Department" syncable="YES">
+        <attribute name="applyAgeDesc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="chargeAmt" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="chargeTyp" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="checkCashAmt" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="checkCashType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="chkCheckCash" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="chkExtra" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="deductChk" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="deptCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="deptId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="deptName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imagePath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="is_asItem" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isAgeApply" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isNotApplyInItem" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="itemcode" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="salesPrice" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="taxApplyIn" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="taxFlg" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <relationship name="departmentItems" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item" inverseName="itemDepartment" inverseEntity="Item" syncable="YES"/>
+    </entity>
+    <entity name="DepartmentTax" representedClassName="DepartmentTax" syncable="YES">
+        <attribute name="amount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="deptId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="taxId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="FuelPump" representedClassName="FuelPump" syncable="YES">
+        <attribute name="amount" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="amountLimit" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="cart" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="volume" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="volumeLimit" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+    </entity>
+    <entity name="GroupMaster" representedClassName="GroupMaster" syncable="YES">
+        <attribute name="costPrice" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="disc_Id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="groupId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="groupName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sellingPrice" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="groupMasterItems" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item" inverseName="itemGroupMaster" inverseEntity="Item" syncable="YES"/>
+    </entity>
+    <entity name="InvoiceData_T" representedClassName="InvoiceData_T" syncable="YES">
+        <attribute name="branchId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="invoiceDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="invoiceItemData" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="invoiceMstData" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="invoiceNo" optional="YES" attributeType="Integer 64" syncable="YES"/>
+        <attribute name="invoicePaymentData" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="isUpload" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="message" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="msgCode" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="regInvoiceNo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="regiterid" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="zId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="Item" representedClassName="Item" syncable="YES">
+        <attribute name="active" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="barcode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="branchId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="cate_MixMatchFlg" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="cate_MixMatchId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="catId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="child_Qty" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="citm_Code" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="costPrice" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="departmentName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="deptId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="descriptionText" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dis_CalcItm" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="eBT" optional="YES" attributeType="Boolean" defaultValueString="0" syncable="YES"/>
+        <attribute name="is_Selected" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isDelete" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isFavourite" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isPriceAtPOS" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="item_Desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="item_Discount" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="item_ImagePath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="item_InStock" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="item_MaxStockLevel" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="item_MinStockLevel" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="item_No" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="item_Remarks" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="itemCode" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="itm_Type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mixMatchFlg" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="mixMatchId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="noDiscountFlg" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="perbox_Qty" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="pos_DISCOUNT" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="pricescale" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="profit_Amt" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="profit_Type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="qty_Discount" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="salesPrice" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="supplierdata" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="taxApply" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="taxType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="weightqty" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="weightype" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="itemBarcodes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ItemBarCode_Md" inverseName="barcodeItem" inverseEntity="ItemBarCode_Md" syncable="YES"/>
+        <relationship name="itemDepartment" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Department" inverseName="departmentItems" inverseEntity="Department" syncable="YES"/>
+        <relationship name="itemGroupMaster" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GroupMaster" inverseName="groupMasterItems" inverseEntity="GroupMaster" syncable="YES"/>
+        <relationship name="itemMixMatchDisc" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Mix_MatchDetail" inverseName="mixMatchDiscount" inverseEntity="Mix_MatchDetail" syncable="YES"/>
+        <relationship name="itemToDisMd" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item_Discount_MD" inverseName="mdToItem" inverseEntity="Item_Discount_MD" syncable="YES"/>
+        <relationship name="itemToPriceMd" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item_Price_MD" inverseName="priceToItem" inverseEntity="Item_Price_MD" syncable="YES"/>
+    </entity>
+    <entity name="Item_Discount_MD" representedClassName="Item_Discount_MD" syncable="YES">
+        <attribute name="dis_Qty" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="dis_UnitPrice" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="iDisNo" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="isDiscounted" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="itemCode" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="mdToItem" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="itemToDisMd" inverseEntity="Item" syncable="YES"/>
+        <relationship name="mdTomd2" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item_Discount_MD2" inverseName="md2Tomd" inverseEntity="Item_Discount_MD2" syncable="YES"/>
+    </entity>
+    <entity name="Item_Discount_MD2" representedClassName="Item_Discount_MD2" syncable="YES">
+        <attribute name="dayId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="discountId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="endDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rowId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="startDate" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="md2Tomd" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item_Discount_MD" inverseName="mdTomd2" inverseEntity="Item_Discount_MD" syncable="YES"/>
+    </entity>
+    <entity name="Item_Price_MD" representedClassName="Item_Price_MD" syncable="YES">
+        <attribute name="applyPrice" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cost" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="createddate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="itemcode" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="priceA" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="priceB" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="priceC" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="priceqtytype" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="profit" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="qty" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="unitPrice" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="priceToItem" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="itemToPriceMd" inverseEntity="Item" syncable="YES"/>
+    </entity>
+    <entity name="ItemBarCode_Md" representedClassName="ItemBarCode_Md" syncable="YES">
+        <attribute name="barCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isBarcodeDeleted" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isDefault" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="itemCode" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="srNo" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="updatedDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="barcodeItem" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="itemBarcodes" inverseEntity="Item" syncable="YES"/>
+    </entity>
+    <entity name="ItemSupplier" representedClassName="ItemSupplier" syncable="YES">
+        <attribute name="itemCode" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="supId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="ItemTag" representedClassName="ItemTag" syncable="YES">
+        <attribute name="isDelete" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="itemId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="sizeId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="ItemTax" representedClassName="ItemTax" syncable="YES">
+        <attribute name="amount" optional="YES" attributeType="Integer 64" syncable="YES"/>
+        <attribute name="itemId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="taxId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="Mix_MatchDetail" representedClassName="Mix_MatchDetail" syncable="YES">
+        <attribute name="amount" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="code" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="discCode" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="discountType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isDelete" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="item_Description" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="itemType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mix_Match_Amt" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="mix_Match_Qty" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="mixMatchId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="quantityX" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="quantityY" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="mixMatchDiscount" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item" inverseName="itemMixMatchDisc" inverseEntity="Item" syncable="YES"/>
+    </entity>
+    <entity name="SizeMaster" representedClassName="SizeMaster" syncable="YES">
+        <attribute name="sizeId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="sizeName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="SupplierMaster" representedClassName="SupplierMaster" syncable="YES">
+        <attribute name="brnSupplierId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="companyName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="contactNo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="selectedPhoneNo" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="TaxMaster" representedClassName="TaxMaster" syncable="YES">
+        <attribute name="amount" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="percentage" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="taxId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="taxNAME" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="TenderPay" representedClassName="TenderPay" syncable="YES">
+        <attribute name="branchId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="cardIntType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="chkDropAmt" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="createdDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="payCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="payId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="payImage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="paymentName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Configuration" positionX="16" positionY="-9" width="128" height="105"/>
+        <element name="Department" positionX="-135" positionY="600" width="128" height="345"/>
+        <element name="DepartmentTax" positionX="-362" positionY="99" width="128" height="90"/>
+        <element name="FuelPump" positionX="-162" positionY="-72" width="128" height="150"/>
+        <element name="GroupMaster" positionX="340" positionY="134" width="128" height="135"/>
+        <element name="InvoiceData_T" positionX="286" positionY="288" width="128" height="225"/>
+        <element name="Item" positionX="45" positionY="113" width="128" height="780"/>
+        <element name="Item_Discount_MD" positionX="225" positionY="-24" width="128" height="148"/>
+        <element name="Item_Discount_MD2" positionX="187" positionY="-216" width="128" height="135"/>
+        <element name="Item_Price_MD" positionX="-162" positionY="-72" width="128" height="238"/>
+        <element name="ItemBarCode_Md" positionX="-144" positionY="-54" width="128" height="148"/>
+        <element name="ItemSupplier" positionX="0" positionY="-117" width="128" height="75"/>
+        <element name="ItemTag" positionX="-173" positionY="-189" width="128" height="90"/>
+        <element name="ItemTax" positionX="-333" positionY="450" width="128" height="90"/>
+        <element name="Mix_MatchDetail" positionX="-155" positionY="153" width="128" height="240"/>
+        <element name="SizeMaster" positionX="-333" positionY="351" width="128" height="75"/>
+        <element name="SupplierMaster" positionX="-342" positionY="189" width="128" height="150"/>
+        <element name="TaxMaster" positionX="-351" positionY="-54" width="128" height="120"/>
+        <element name="TenderPay" positionX="376" positionY="-99" width="128" height="165"/>
+    </elements>
+</model>

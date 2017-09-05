@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+
+</head>
+<body style="padding:0px; margin:0px;">
+<div style=" width:100% font-family:Helvetica Neue; margin:auto; font-size:16px;">
+  <table border="0" cellpadding="0" cellspacing="0"  style="font-family:Helvetica Neue; width:300px; font-size:16px; background-color:#f7f7f7;  margin-top:-8px;padding-top:8px;padding-bottom:8px;border-bottom:1px solid #a5a6a6; margin:auto;">
+    <tr>
+      <td align="center">$$BRANCH_NAME$$</td>
+    </tr>
+    <tr>
+      <td align="center">$$ADDRESS$$</td>
+    </tr>
+    <tr>
+      <td align="center">$$STATE_CITY_ZIPCODE$$</td>
+    </tr>
+  </table>
+  <table cellpadding="0" cellspacing="0"  style=" width:300px; margin:auto; font-size: 15px;" border="0" >
+    <tr>
+      <td colspan="2">&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center" style="padding-bottom:10px;"><span style="padding:0 10px; background:#000; color:#fff;">Card Receipt</span></td>
+    </tr>
+    <tr>
+      <td colspan="2">Invoice &nbsp; #: $$TRANSACTION_NO$$ </td>
+    </tr>
+    <tr>
+      <td colspan="2">Cashier &nbsp; #: $$USER_NAME$$
+        <div style="float:right;">Register &nbsp; #: $$REGISTER_NAME$$ </div></td>
+    </tr>
+    <tr>
+      <td colspan="2">Date: $$DATE$$</td>
+    </tr>
+    <tr>
+      <td colspan="2" style="padding-bottom:0px; border-bottom:1px dotted #000;">&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="2">&nbsp;</td>
+    </tr>
+  </table>
+
+  $$CARD_DATA$$
+  
+  <table style=" width:300px; margin:auto; font-size: 15px;" >
+      <td colspan="2">
+  $$TIPS_DATA$$
+      </td>
+    </tr>
+    <tr>
+        <td colspan="2">&nbsp;</td>
+    </tr>
+    <tr>
+    <tr>
+      <td colspan="2" align="right">Cardholder Signature </td>
+    </tr>
+     <tr>
+      <td colspan="2">&nbsp;</td>
+    </tr>
+     <tr>
+      <td colspan="2">&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="2">
+      <div style="float:right; width:90%;">
+      <div style="float:left;">X &nbsp;</div>
+        <div style=" float:right; border-bottom:1px solid #000; ; width:90%; height: 12px;"></div>
+        </div>
+        </td>
+    </tr>
+    <tr>
+      <td colspan="2">&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="2">I AGREE TO PAY ABOVE TOTAL AMOUNT ACCORDING TO CARD ISSUER AGREEMENT. </td>
+    </tr>
+    <tr>
+       <td colspan="2">&nbsp;</td>
+    </tr>
+    <div style="width:100%; float:left; padding-bottom:10px; margin-bottom:15px; padding-top:15px;">
+        <table style="font-family:Helvetica Neue;width:336px;font-size:16px;padding-top:8px;padding-bottom:8px;padding-right:12px;padding-left:12px;">
+            <tbody><tr><td align="center">$$HELPMESSAGE1$$</td></tr><tr><td align="center">$$BRANCH_NAME$$</td></tr><tr><td align="center">$$HELPMESSAGE2$$</td></tr><tr><td align="center">$$HELPMESSAGE3$$</td></tr></tbody></table>
+    </div>
+    <tr>
+       <td colspan="2">&nbsp;</td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>

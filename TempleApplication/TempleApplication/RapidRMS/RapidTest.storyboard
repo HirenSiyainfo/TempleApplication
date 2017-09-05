@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--Discount Bill DetailVC-->
+        <scene sceneID="Vxi-9F-1Qh">
+            <objects>
+                <viewController storyboardIdentifier="DiscountBillDetailVC" id="Re5-Et-8ie" customClass="DiscountBillDetailVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ncS-bY-rRC"/>
+                        <viewControllerLayoutGuide type="bottom" id="9PY-7G-04X"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1bV-vb-jxB">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Axh-MF-SVF">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="75"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GRAPH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0l-mQ-UpQ">
+                                        <rect key="frame" x="486" y="30" width="59" height="27"/>
+                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="px7-DE-Ph7">
+                                        <rect key="frame" x="977" y="30" width="37" height="37"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                        <state key="normal" image="closeicon.png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnCancelClick:" destination="Re5-Et-8ie" eventType="touchUpInside" id="yUh-Ut-drj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="1024" id="84l-Z9-U4u"/>
+                                    <constraint firstAttribute="height" constant="75" id="dHw-vK-hpd"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zef-Jm-O2k">
+                                <rect key="frame" x="0.0" y="75" width="1024" height="693"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="efF-O3-nsa" customClass="DiscountGraphView">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="693"/>
+                                        <color key="backgroundColor" red="0.79805715460000004" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="efF-O3-nsa" secondAttribute="height" multiplier="1024:693" id="dDR-hg-Tx6"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="efF-O3-nsa" firstAttribute="top" secondItem="Zef-Jm-O2k" secondAttribute="top" id="6Wn-Qo-Zaf"/>
+                                    <constraint firstAttribute="width" secondItem="Zef-Jm-O2k" secondAttribute="height" multiplier="1024:693" id="Dm1-V1-Yf4"/>
+                                    <constraint firstItem="efF-O3-nsa" firstAttribute="leading" secondItem="Zef-Jm-O2k" secondAttribute="leading" id="O7h-YJ-SCp"/>
+                                    <constraint firstAttribute="bottom" secondItem="efF-O3-nsa" secondAttribute="bottom" id="YZb-fJ-NqL"/>
+                                    <constraint firstItem="efF-O3-nsa" firstAttribute="centerY" secondItem="Zef-Jm-O2k" secondAttribute="centerY" priority="250" id="qga-vM-lQj"/>
+                                    <constraint firstAttribute="trailing" secondItem="efF-O3-nsa" secondAttribute="trailing" id="wZz-Rw-MKr"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="Re5-Et-8ie" id="8we-cC-s5q"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.078431372549019607" green="0.13333333333333333" blue="0.23921568627450979" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Axh-MF-SVF" firstAttribute="leading" secondItem="1bV-vb-jxB" secondAttribute="leading" id="IqE-Rd-Wz8"/>
+                            <constraint firstAttribute="trailing" secondItem="Axh-MF-SVF" secondAttribute="trailing" id="NZS-sl-d1O"/>
+                            <constraint firstItem="Zef-Jm-O2k" firstAttribute="leading" secondItem="1bV-vb-jxB" secondAttribute="leading" id="aEv-7y-di0"/>
+                            <constraint firstItem="9PY-7G-04X" firstAttribute="top" secondItem="Zef-Jm-O2k" secondAttribute="bottom" id="f6b-Sg-c49"/>
+                            <constraint firstItem="Zef-Jm-O2k" firstAttribute="top" secondItem="Axh-MF-SVF" secondAttribute="bottom" id="vS4-pg-8nN"/>
+                            <constraint firstItem="Axh-MF-SVF" firstAttribute="top" secondItem="1bV-vb-jxB" secondAttribute="top" id="x8h-th-eh7"/>
+                            <constraint firstAttribute="trailing" secondItem="Zef-Jm-O2k" secondAttribute="trailing" id="xCP-mM-mzZ"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
+                    <connections>
+                        <outlet property="discountGraphView" destination="efF-O3-nsa" id="jEB-O5-BbC"/>
+                        <outlet property="scrollView" destination="Zef-Jm-O2k" id="FSs-Fc-Txe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QVd-X9-Q8b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="324" y="1677"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="closeicon.png" width="37" height="37"/>
+    </resources>
+</document>

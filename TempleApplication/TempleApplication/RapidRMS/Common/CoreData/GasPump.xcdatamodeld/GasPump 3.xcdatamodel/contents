@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="14F27" minimumToolsVersion="Xcode 4.3">
+    <entity name="FuelPump" representedClassName="FuelPump" syncable="YES">
+        <attribute name="amount" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="amountLimit" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="amountUnit" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cart" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="priceUnit" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pumpIndex" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="volume" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="volumeLimit" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="volumeUnit" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="FuelTank" representedClassName="FuelTank" syncable="YES">
+        <attribute name="capacity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="density" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="densityUnit" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="fuelTankIndex" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tankDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="volume" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="volumeUnit" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="FuelType" representedClassName="FuelType" syncable="YES">
+        <attribute name="activePrice" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="caseSelf" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="cashFull" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="creditFull" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="creditSelf" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="fuelTypeDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fuelTypeIndex" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="isDelete" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="oldcaseSelf" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="oldcashFull" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="oldcreditFull" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="oldcreditSelf" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="priceUnit" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shortName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="volumeUnit" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="GasStation" representedClassName="GasStation" syncable="YES">
+        <attribute name="fuelTypeCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pumpCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="stationDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tankCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="PumpCart" representedClassName="PumpCart" syncable="YES">
+        <attribute name="approvedAmount" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="balanceAmount" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="cartId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cartStatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isPaid" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="pumpIndex" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="pumpStatus" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="FuelPump" positionX="-63" positionY="-18" width="128" height="225"/>
+        <element name="FuelTank" positionX="-36" positionY="9" width="128" height="165"/>
+        <element name="FuelType" positionX="-54" positionY="-9" width="128" height="285"/>
+        <element name="GasStation" positionX="-18" positionY="27" width="128" height="120"/>
+        <element name="PumpCart" positionX="-27" positionY="108" width="128" height="150"/>
+    </elements>
+</model>

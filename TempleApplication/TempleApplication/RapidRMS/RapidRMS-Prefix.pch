@@ -1,0 +1,93 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+
+#import <QuartzCore/QuartzCore.h>
+#import <CoreData/CoreData.h>
+#import "RcrController.h"
+#import "AppDelegate.h"
+#import "RimsController.h"
+
+#import "POSLoginView.h"
+
+#import "Constant.h"
+#import "UtilityManager.h"
+#import "AsyncImageView.h"
+// #import "SwipeView.h"
+#import "CustomPageControl.h"
+#import "WebServiceConstants.h"
+#import "RapidWebServiceConnection.h"
+#import "MICheckBox.h"
+
+#import"ASIHTTPRequest.h"
+#import "ASIFormDataRequest.h"
+#import "ASINetworkQueue.h"
+#import "CorePlot-CocoaTouch.h"
+#import "DashBoardSettingVC.h"
+#import <FacebookSDK/FacebookSDK.h>
+#import <Twitter/Twitter.h>
+#import <Social/Social.h>
+#import <Accounts/Accounts.h>
+#import <Appsee/Appsee.h>
+#import "RmsActivityIndicator.h"
+#import "RmsAppSeeEvents.h"
+#import <Intercom/Intercom.h>
+#import "IntercomHandler.h"
+
+#import "RapidAutoLock.h"
+#import "UserRights.h"
+
+#import "CALayer+Customize.h"
+#import "UpdateLogManager.h"
+
+#endif
+
+// NAVIGATIONBAR_MACRO
+#define NAVIGATIONBAR_MACRO     \
+if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) \
+{ \
+    self.navigationController.navigationBarHidden = NO; \
+} \
+else \
+{ \
+    self.navigationController.navigationBarHidden = YES; \
+} \
+
+#define NAVIGATIONBAR_MENUBUTTOM     \
+self.navigationController.navigationBarHidden = YES; \
+
+// STORYBOARD_MACRO
+#define IsPhone() ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
+#define IsPad()   ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+#define MainStoryBoard() (IsPad() ? @"Main" : @"Main_iPhone")
+#define RIMStoryBoard() (IsPad() ? @"RimStoryboard" : @"RimStoryboard_iPhone")
+#define RIMHeaderHeight() (IsPad() ? 38 : 38)
+#define RIMLeftMargin() (IsPad() ? 20 : 12)
+#define ICStoryBoard() (IsPad() ? @"ICStoryboard" : @"ICStoryboard_iPhone")
+#define ICHeaderHeight() (IsPad() ? 38 : 38)
+#define ICLeftMargin() (IsPad() ? 20 : 12)
+
+#define LINEAPRO_SUPPORTED
+
+//#define USER_STORE_FMT
+
+//#define PAXAUTHCAPTURE
+
+#define RAPIDONSITE
+
+#define MERCHANDIZE_ENABLE
+
+
+

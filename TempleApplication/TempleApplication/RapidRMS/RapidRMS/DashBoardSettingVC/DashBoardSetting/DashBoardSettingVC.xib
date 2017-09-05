@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="10116" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none">
+    <dependencies>
+        <development version="5100" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Lato-Light.ttf">
+            <string>Lato-Light</string>
+        </mutableArray>
+        <mutableArray key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DashBoardSettingVC">
+            <connections>
+                <outlet property="aboutUsView" destination="3dU-r2-cw4" id="M91-Zb-kCn"/>
+                <outlet property="appsSettingView" destination="9ll-Bd-gib" id="Jyg-PC-oY7"/>
+                <outlet property="btnDoneApps" destination="Wfb-9Y-uo7" id="vZY-oP-FGb"/>
+                <outlet property="btnIntercom" destination="bK7-8q-PKw" id="Yg9-CQ-cNn"/>
+                <outlet property="customerDiplayView" destination="09L-MN-2Cz" id="7Wi-M4-Ge2"/>
+                <outlet property="dashBoardIconView" destination="yGs-AS-LKz" id="Gkz-Hl-eni"/>
+                <outlet property="dashboardContainerView" destination="TKk-Gq-xqw" id="Zvk-qM-vKw"/>
+                <outlet property="exitButton" destination="9gX-6R-ERs" id="R3F-kb-jqo"/>
+                <outlet property="gasPumpView" destination="wbf-Qw-TWd" id="WNN-kT-BxO"/>
+                <outlet property="kitchenprinterSettingview" destination="HDo-z5-xCz" id="PvL-5J-F3l"/>
+                <outlet property="lblCurrentDate" destination="04Q-GS-0Gy" id="864-b2-eIr"/>
+                <outlet property="lblDashBardTitle" destination="4Fl-YP-DX8" id="AJW-Hi-cjh"/>
+                <outlet property="lblSecondDate" destination="JYH-x8-ZCK" id="5I1-Tm-Uih"/>
+                <outlet property="paxDeviceSettingView" destination="e7w-eK-Rvk" id="hlV-4l-NYU"/>
+                <outlet property="printerSettingview" destination="Jpe-uZ-NSw" id="m3f-Nk-bm3"/>
+                <outlet property="settingsButton" destination="7dN-Qf-JoH" id="kLJ-LI-seb"/>
+                <outlet property="showCalendar" destination="v49-xM-wqJ" id="fUF-xY-Mex"/>
+                <outlet property="showCalendarSecond" destination="a2y-pm-TyR" id="sm1-dH-JBR"/>
+                <outlet property="slidingView" destination="bh7-VL-7OL" id="sge-zB-SlO"/>
+                <outlet property="synchronizeView" destination="SkP-nn-lz8" id="yOS-sX-oea"/>
+                <outlet property="tblActive" destination="ebr-Dn-cmx" id="p29-Hq-wRN"/>
+                <outlet property="tblNotActivated" destination="fDt-em-ExN" id="BUs-x6-Wsf"/>
+                <outlet property="tblSettingSideMenu" destination="Xil-zi-Hsn" id="VVb-KP-bve"/>
+                <outlet property="tenderView" destination="kja-2b-ofn" id="MQq-BV-yes"/>
+                <outlet property="txtRegisterName" destination="L1c-s6-TfE" id="L4I-fq-UYG"/>
+                <outlet property="txtpassword" destination="EDY-6g-tUD" id="uUY-vG-U2P"/>
+                <outlet property="txtusername" destination="Eyv-5r-cWJ" id="x2D-3c-sJM"/>
+                <outlet property="uvActiveApps" destination="kVU-C1-PlM" id="E7v-W7-cAk"/>
+                <outlet property="uvAuthentication" destination="t7C-30-vIT" id="KdU-ez-UGN"/>
+                <outlet property="uvButtonNavigation" destination="zpr-bq-WCQ" id="qTV-fx-HXR"/>
+                <outlet property="uvDispSubView" destination="35K-SM-uou" id="hkz-ya-3xn"/>
+                <outlet property="uvModuleShortCut" destination="AW4-Ed-Y2v" id="v5w-i4-G2D"/>
+                <outlet property="uvNotActivatedApps" destination="AJ4-5m-fKe" id="ebS-mG-3w8"/>
+                <outlet property="uvOthers" destination="0gP-1J-y7r" id="Q46-LB-eAW"/>
+                <outlet property="uvRcr" destination="FKF-ot-TdI" id="KNr-Fb-fEY"/>
+                <outlet property="uvRim" destination="Rvh-D5-KI1" id="e3p-eG-u4j"/>
+                <outlet property="uvapps" destination="aCH-6J-ntg" id="B67-9f-e2u"/>
+                <outlet property="view" destination="2" id="3"/>
+                <outlet property="viewOfflineRecord" destination="vV0-Vx-jXZ" id="4Yc-WV-zve"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" id="aas-Hc-r33" userLabel="View - Header">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="75"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RmsheaderLogo.png" id="Bir-mq-6kj">
+                            <rect key="frame" x="901" y="30" width="103" height="22"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="04Q-GS-0Gy" userLabel="Label - Date">
+                            <rect key="frame" x="20" y="21" width="200" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                            <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="v49-xM-wqJ" userLabel="Button - Calendar First">
+                            <rect key="frame" x="31" y="20" width="37" height="37"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                            <state key="normal" backgroundImage="calendar.png">
+                                <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="showCalendar:" destination="-1" eventType="touchUpInside" id="Iag-Sh-TEU"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rmw-uv-ly8" userLabel="Label - name">
+                            <rect key="frame" x="432" y="20" width="160" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                            <color key="textColor" red="0.34901960780000002" green="0.4941176471" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" id="9h2-2N-A4X" userLabel="View - border">
+                            <rect key="frame" x="0.0" y="64" width="1024" height="1"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4Fl-YP-DX8" userLabel="Label - Title">
+                            <rect key="frame" x="506" y="29" width="250" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bK7-8q-PKw" userLabel="Button - Intercom">
+                            <rect key="frame" x="850" y="16" width="45" height="45"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                            <state key="normal">
+                                <color key="titleColor" red="0.047058823530000002" green="0.6705882353" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9gX-6R-ERs">
+                            <rect key="frame" x="253" y="10" width="50" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="BackArrow_Side.png">
+                                <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="secondMenuTapped:" destination="-1" eventType="touchUpInside" id="1NQ-Px-g47"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.027450980392156862" green="0.054901960784313725" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="20" sectionFooterHeight="20" id="Xil-zi-Hsn" userLabel="Table View - Setting Slide menu">
+                    <rect key="frame" x="0.0" y="75" width="313" height="693"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.027450980392156862" green="0.054901960784313725" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="gjd-Jc-LfI"/>
+                        <outlet property="delegate" destination="-1" id="PHy-dG-eCX"/>
+                    </connections>
+                </tableView>
+                <view hidden="YES" contentMode="scaleToFill" id="tg0-qA-qd4" userLabel="View - border">
+                    <rect key="frame" x="312" y="65" width="1" height="654"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.82745098039215681" green="0.83529411764705885" blue="0.83529411764705885" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view contentMode="scaleToFill" id="aCH-6J-ntg" userLabel="View - Apps">
+                    <rect key="frame" x="313" y="65" width="711" height="648"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NameyourDevice_bg.png" id="f4W-cL-hwh">
+                            <rect key="frame" x="19" y="49" width="735" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="DeviceName" minimumFontSize="17" id="L1c-s6-TfE">
+                            <rect key="frame" x="29" y="59" width="715" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="textColor" red="0.51764705879999995" green="0.51372549020000002" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="Gpl-xn-1y8"/>
+                            </connections>
+                        </textField>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Your Device" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="S2s-QE-pKI">
+                            <rect key="frame" x="20" y="20" width="166" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.45098039220000002" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Applications" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4Zu-ZC-dlB">
+                            <rect key="frame" x="20" y="132" width="120" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.45098039220000002" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" id="zpr-bq-WCQ" userLabel="View - Available Apps">
+                            <rect key="frame" x="19" y="158" width="735" height="48"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qRP-6W-4iM">
+                                    <rect key="frame" x="0.0" y="0.0" width="735" height="48"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <state key="normal" title="Available Apps">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnNotActivatedClicked:" destination="-1" eventType="touchUpInside" id="HZm-Xd-QwM"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        </view>
+                        <view contentMode="scaleToFill" id="QzC-rc-Fk5" userLabel="View - Active Apps">
+                            <rect key="frame" x="19" y="206" width="735" height="48"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Kgv-VU-bdE">
+                                    <rect key="frame" x="0.0" y="0.0" width="735" height="48"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <state key="normal" title="Active Apps">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnNotActivatedClicked:" destination="-1" eventType="touchUpInside" id="Rzp-Tr-v6d"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        </view>
+                        <view hidden="YES" contentMode="scaleToFill" id="AJ4-5m-fKe" userLabel="View - Not Activated Apps">
+                            <rect key="frame" x="20" y="206" width="733" height="435"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="22" sectionFooterHeight="22" id="fDt-em-ExN" userLabel="Table View - not activated">
+                                    <rect key="frame" x="20" y="20" width="693" height="395"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <connections>
+                                        <outlet property="dataSource" destination="-1" id="cSk-5y-Le1"/>
+                                        <outlet property="delegate" destination="-1" id="Ujl-jp-2lc"/>
+                                    </connections>
+                                </tableView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <view hidden="YES" contentMode="scaleToFill" id="kVU-C1-PlM" userLabel="View - Activated Apps">
+                            <rect key="frame" x="20" y="206" width="733" height="435"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="22" sectionFooterHeight="22" id="ebr-Dn-cmx" userLabel="Table View - active">
+                                    <rect key="frame" x="20" y="20" width="693" height="395"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <connections>
+                                        <outlet property="dataSource" destination="-1" id="a0r-dh-jnO"/>
+                                        <outlet property="delegate" destination="-1" id="sUZ-K9-A1Z"/>
+                                    </connections>
+                                </tableView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <view hidden="YES" contentMode="scaleToFill" id="0gP-1J-y7r" userLabel="View - Others">
+                            <rect key="frame" x="20" y="206" width="733" height="435"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.89411764705882346" green="0.89411764705882346" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view contentMode="scaleToFill" id="35K-SM-uou" userLabel="View - dispsubview">
+                    <rect key="frame" x="313" y="65" width="711" height="648"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" id="Hl6-yL-jSa" userLabel="View - Footer">
+                    <rect key="frame" x="313" y="712" width="711" height="56"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="x2t-QK-EOq" userLabel="Button - Exit Button">
+                            <rect key="frame" x="0.0" y="0.0" width="300" height="56"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Wfb-9Y-uo7" userLabel="Button - done">
+                            <rect key="frame" x="751" y="0.0" width="273" height="57"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="done_btn.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="btnExitClicked:" destination="-1" eventType="touchUpInside" id="iqB-cp-HGA"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="t7C-30-vIT" userLabel="View - AuthenticationView">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" id="kIk-kH-MdV" userLabel="View - light black view">
+                            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.70000000000000007" colorSpace="calibratedWhite"/>
+                        </view>
+                        <view opaque="NO" contentMode="scaleToFill" id="SYV-Lx-zJR" userLabel="View - bg view">
+                            <rect key="frame" x="485" y="189" width="306" height="390"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0Vp-Uv-y6L">
+                                    <rect key="frame" x="20" y="20" width="119" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emailtextBoxbg.png" id="Lg5-S3-nXp">
+                                    <rect key="frame" x="18" y="89" width="268" height="46"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email or User ID" minimumFontSize="17" id="Eyv-5r-cWJ" userLabel="Text Field - Email or User ID">
+                                    <rect key="frame" x="25" y="94" width="230" height="35"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="cgh-dM-hwH"/>
+                                    </connections>
+                                </textField>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PasstextBoxbg.png" id="u6b-3e-pUW">
+                                    <rect key="frame" x="18" y="155" width="268" height="46"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" id="EDY-6g-tUD" userLabel="Text Field - Password">
+                                    <rect key="frame" x="25" y="160" width="230" height="35"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="7y2-RT-0Q8"/>
+                                    </connections>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="APB-tq-nMV" userLabel="Button - Sign In">
+                                    <rect key="frame" x="18" y="233" width="268" height="56"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                    <state key="normal" title="Login" backgroundImage="globalTopBlue.png">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="highlighted" backgroundImage="globalgreen.png"/>
+                                    <connections>
+                                        <action selector="btnSignInClicked:" destination="-1" eventType="touchUpInside" id="FbV-rD-gm6"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="U3r-aI-7jl">
+                                    <rect key="frame" x="18" y="310" width="268" height="56"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                    <state key="normal" title="Cancel" backgroundImage="globalTopBlue.png"/>
+                                    <state key="highlighted" backgroundImage="globalgreen.png"/>
+                                    <connections>
+                                        <action selector="btnCancelClicked:" destination="-1" eventType="touchUpInside" id="19c-8A-cYj"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" id="bh7-VL-7OL" userLabel="Sliding View">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" id="TKk-Gq-xqw" userLabel="deshboard view container">
+                            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
+                        <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JYH-x8-ZCK" userLabel="Label - Date">
+                            <rect key="frame" x="20" y="28" width="200" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                            <color key="textColor" red="0.34901960780000002" green="0.4941176471" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" id="a2y-pm-TyR" userLabel="Button - Calendar Second">
+                            <rect key="frame" x="15" y="20" width="36" height="36"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
+                            <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="1"/>
+                            <inset key="titleEdgeInsets" minX="1" minY="0.0" maxX="0.0" maxY="9"/>
+                            <state key="normal" title="18" backgroundImage="calendar.png">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="showCalendar:" destination="-1" eventType="touchUpInside" id="X2q-TZ-6sH"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" id="7dN-Qf-JoH" userLabel="Button - clear">
+                            <rect key="frame" x="452" y="700" width="120" height="68"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" image="setting_icon_new.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="menuButtonTapped:" destination="-1" eventType="touchUpInside" id="wZT-hf-M7z"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" id="09L-MN-2Cz" userLabel="View - customer display">
+                    <rect key="frame" x="313" y="20" width="711" height="691"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" id="yGs-AS-LKz" userLabel="View - dashboard">
+                    <rect key="frame" x="313" y="65" width="711" height="648"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" id="kja-2b-ofn" userLabel="View - tender view">
+                    <rect key="frame" x="313" y="20" width="711" height="691"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" id="9ll-Bd-gib" userLabel="View - app setting">
+                    <rect key="frame" x="313" y="65" width="711" height="748"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" id="3dU-r2-cw4" userLabel="View - about us view">
+                    <rect key="frame" x="313" y="65" width="711" height="703"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" id="SkP-nn-lz8" userLabel="View - synchronize view">
+                    <rect key="frame" x="313" y="65" width="711" height="703"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" id="FKF-ot-TdI" userLabel="View - Rcr">
+                    <rect key="frame" x="313" y="20" width="711" height="691"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.89411764705882346" green="0.89411764705882346" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view contentMode="scaleToFill" id="Jpe-uZ-NSw" userLabel="View - PrinterSetting">
+                    <rect key="frame" x="313" y="20" width="711" height="691"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.89411764705882346" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view contentMode="scaleToFill" id="HDo-z5-xCz" userLabel="View - Kitchen Printing">
+                    <rect key="frame" x="313" y="20" width="711" height="748"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.89411764709999997" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" id="wbf-Qw-TWd" userLabel="View - Gas Pump">
+                    <rect key="frame" x="313" y="0.0" width="711" height="768"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" red="0.89411764705882346" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view contentMode="scaleToFill" id="vV0-Vx-jXZ" userLabel="View - OfflineRecord">
+                    <rect key="frame" x="313" y="65" width="711" height="646"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" id="Rvh-D5-KI1" userLabel="View - Rim">
+                    <rect key="frame" x="313" y="65" width="711" height="703"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" id="AW4-Ed-Y2v" userLabel="View - ModuleShortCutSelection">
+                    <rect key="frame" x="313" y="65" width="711" height="703"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" id="e7w-eK-Rvk" userLabel="View - PaxDevice View">
+                    <rect key="frame" x="313" y="20" width="711" height="691"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.89411764705882346" green="0.89411764705882346" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="512" y="232"/>
+        </view>
+        <view contentMode="scaleToFill" id="WOo-zE-k8e" userLabel="View - side menu view">
+            <rect key="frame" x="0.0" y="0.0" width="313" height="646"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Settings" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3WJ-Ka-shz" userLabel="Label -   Setting">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Vx2-E2-JhF" userLabel="Button - about us">
+                    <rect key="frame" x="0.0" y="44" width="313" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="About.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="Aboutactive.png"/>
+                    <connections>
+                        <action selector="btnAboutUsClicked:" destination="-1" eventType="touchUpInside" id="Ndo-Oq-BWP"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Smc-rG-LGC" userLabel="Button - apps">
+                    <rect key="frame" x="0.0" y="88" width="313" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="appsNormal.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="appsActive.png"/>
+                    <state key="highlighted" image="appsActive.png"/>
+                    <connections>
+                        <action selector="btnAppsClicked:" destination="-1" eventType="touchUpInside" id="MtS-nS-sel"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="lf7-Ju-0bE" userLabel="Button - sound">
+                    <rect key="frame" x="0.0" y="132" width="313" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <state key="normal" image="ToucSound.png">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="ToucSoundActive.png"/>
+                    <connections>
+                        <action selector="btnSoundClicked:" destination="-1" eventType="touchUpInside" id="Bp8-jB-q42"/>
+                    </connections>
+                </button>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Hardware Settings" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="X7E-Hu-9ye" userLabel="Label -  Hardware setting">
+                    <rect key="frame" x="0.0" y="176" width="300" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="HgZ-Iv-nEy" userLabel="Button - UPC Scan">
+                    <rect key="frame" x="0.0" y="220" width="313" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <state key="normal" image="UPCScanner.png">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="UPCScannerActive.png"/>
+                    <connections>
+                        <action selector="btnUpcScannerClicked:" destination="-1" eventType="touchUpInside" id="PDF-be-Vtr"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="833-40-p2b" userLabel="Button - Customer Disp">
+                    <rect key="frame" x="0.0" y="308" width="313" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <state key="normal" image="customerDisplay.png">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="customerDisplayActive.png"/>
+                    <connections>
+                        <action selector="btnCustomerDispClicked:" destination="-1" eventType="touchUpInside" id="a19-aQ-yJC"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="GSe-Dn-8rm" userLabel="Button - Tender">
+                    <rect key="frame" x="0.0" y="264" width="313" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <state key="normal" image="TenderConfigration.png">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="TenderConfigrationActive.png"/>
+                    <connections>
+                        <action selector="btnCustomerDispClicked:" destination="-1" eventType="touchUpInside" id="Cle-Pg-5r4"/>
+                        <action selector="btnTenderConfigClicked:" destination="-1" eventType="touchUpInside" id="jPx-Sz-hx9"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NTp-nS-oog" userLabel="Button - Cash Register">
+                    <rect key="frame" x="0.0" y="396" width="313" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <state key="normal" image="CashRegisterSetting.png">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="CashRegisterSettingActive.png"/>
+                    <connections>
+                        <action selector="btnCashRegisterClicked:" destination="-1" eventType="touchUpInside" id="Qg9-2p-PNW"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4V9-Fr-Gmy" userLabel="Button - Syncronize">
+                    <rect key="frame" x="0.0" y="484" width="313" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <state key="normal" image="SyncSetting.png">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="SyncSettingActive.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnSynchronizeClicked:" destination="-1" eventType="touchUpInside" id="yQ9-ZV-TQ9"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fOe-Mm-p7C" userLabel="Button - Printer">
+                    <rect key="frame" x="0.0" y="527" width="313" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <state key="normal" image="PrinterSetting.png">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="PrinterSettingActive.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnPrinterSettingClicked:" destination="-1" eventType="touchUpInside" id="MAj-ou-4Uy"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="FH1-uh-P85" userLabel="Button - gas pump">
+                    <rect key="frame" x="0.0" y="570" width="313" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <state key="normal" image="GasPumpSetting.png">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="GasPumpSettingActive.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnGasPumpClicked:" destination="-1" eventType="touchUpInside" id="YTY-8l-dYK"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3Yy-aI-9hV">
+                    <rect key="frame" x="0.0" y="440" width="313" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="14"/>
+                    <inset key="contentEdgeInsets" minX="45" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" backgroundImage="offlinerecord.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" backgroundImage="offlinerecordselected.png"/>
+                    <connections>
+                        <action selector="showOfflienRecords:" destination="-1" eventType="touchUpInside" id="M1O-k8-4aT"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.027450980390000001" green="0.054901960780000002" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="About.png" width="311" height="55"/>
+        <image name="Aboutactive.png" width="311" height="55"/>
+        <image name="BackArrow_Side.png" width="23" height="16"/>
+        <image name="CashRegisterSetting.png" width="300" height="44"/>
+        <image name="CashRegisterSettingActive.png" width="300" height="44"/>
+        <image name="GasPumpSetting.png" width="311" height="55"/>
+        <image name="GasPumpSettingActive.png" width="311" height="55"/>
+        <image name="NameyourDevice_bg.png" width="685" height="50"/>
+        <image name="PasstextBoxbg.png" width="268" height="46"/>
+        <image name="PrinterSetting.png" width="311" height="55"/>
+        <image name="PrinterSettingActive.png" width="311" height="55"/>
+        <image name="RmsheaderLogo.png" width="103" height="22"/>
+        <image name="SyncSetting.png" width="311" height="55"/>
+        <image name="SyncSettingActive.png" width="311" height="55"/>
+        <image name="TenderConfigration.png" width="311" height="55"/>
+        <image name="TenderConfigrationActive.png" width="311" height="55"/>
+        <image name="ToucSound.png" width="311" height="55"/>
+        <image name="ToucSoundActive.png" width="311" height="55"/>
+        <image name="UPCScanner.png" width="311" height="55"/>
+        <image name="UPCScannerActive.png" width="311" height="55"/>
+        <image name="appsActive.png" width="311" height="55"/>
+        <image name="appsNormal.png" width="311" height="55"/>
+        <image name="calendar.png" width="37" height="37"/>
+        <image name="customerDisplay.png" width="311" height="55"/>
+        <image name="customerDisplayActive.png" width="311" height="55"/>
+        <image name="done_btn.png" width="273" height="49"/>
+        <image name="emailtextBoxbg.png" width="268" height="46"/>
+        <image name="globalTopBlue.png" width="1" height="1"/>
+        <image name="globalgreen.png" width="1" height="1"/>
+        <image name="offlinerecord.png" width="311" height="47"/>
+        <image name="offlinerecordselected.png" width="311" height="47"/>
+        <image name="setting_icon_new.png" width="36" height="36"/>
+    </resources>
+</document>

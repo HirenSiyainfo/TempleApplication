@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+            <string>Lato-Bold</string>
+        </mutableArray>
+        <mutableArray key="Lato-Light.ttf">
+            <string>Lato-Light</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopOverController">
+            <connections>
+                <outlet property="lblTitleName" destination="2vc-1d-LX2" id="wcW-1y-iN3"/>
+                <outlet property="topinPrice" destination="xPL-h9-Dol" id="KZ6-aQ-3yT"/>
+                <outlet property="view" destination="z74-j5-Okl" id="SYw-T9-Gpj"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="z74-j5-Okl">
+            <rect key="frame" x="0.0" y="0.0" width="335" height="596"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="quantitypopup.png" id="1lK-cI-AEt">
+                    <rect key="frame" x="0.0" y="0.0" width="335" height="596"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <view contentMode="scaleToFill" id="Bxe-A7-dIX">
+                    <rect key="frame" x="7" y="76" width="325" height="70"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1001" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" id="xPL-h9-Dol" userLabel="Text Field - number">
+                            <rect key="frame" x="27" y="10" width="270" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="textColor" red="0.76862745099999996" green="0.67843137249999996" blue="0.070588235289999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="35"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="sYc-Lh-WsA"/>
+                            </connections>
+                        </textField>
+                        <view contentMode="scaleToFill" id="2Bd-Qg-Gpk">
+                            <rect key="frame" x="0.0" y="69" width="325" height="1"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" id="NFM-tp-2Is">
+                    <rect key="frame" x="7" y="7" width="321" height="69"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RCRPopup_Header.png" id="ubu-iY-ZOW">
+                            <rect key="frame" x="0.0" y="0.0" width="321" height="69"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ITEM PRICE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2vc-1d-LX2">
+                            <rect key="frame" x="0.0" y="3" width="321" height="60"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="25"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view tag="1001" contentMode="scaleToFill" id="KTY-3W-Xx4">
+                    <rect key="frame" x="5" y="146" width="325" height="442"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bqp-Ct-n5f" userLabel="Button 1">
+                            <rect key="frame" x="34" y="20" width="84" height="84"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
+                            <state key="normal" image="Price_At_Pos_1.png">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="Price_At_Pos_1Selected.png">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="tenderNumPadButtonAction:" destination="-1" eventType="touchUpInside" id="7y6-8t-xQy"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dFI-LM-zaF" userLabel="Button 2">
+                            <rect key="frame" x="120" y="20" width="84" height="84"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
+                            <state key="normal" image="Price_At_Pos_2.png">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="Price_At_Pos_2Selected.png">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="tenderNumPadButtonAction:" destination="-1" eventType="touchUpInside" id="o6D-2H-Jfy"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="AIr-vA-42Y" userLabel="Button 3">
+                            <rect key="frame" x="206" y="20" width="84" height="84"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
+                            <state key="normal" image="Price_At_Pos_3.png">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="Price_At_Pos_3Selected.png">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="tenderNumPadButtonAction:" destination="-1" eventType="touchUpInside" id="fsA-eC-gZ8"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kA5-Aw-SxT" userLabel="Button 4">
+                            <rect key="frame" x="34" y="106" width="84" height="84"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
+                            <state key="normal" image="Price_At_Pos_4.png">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="Price_At_Pos_4Selected.png">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="tenderNumPadButtonAction:" destination="-1" eventType="touchUpInside" id="o31-pi-uMM"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="OZ0-2U-k9D" userLabel="Button 5">
+                            <rect key="frame" x="120" y="106" width="84" height="84"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
+                            <state key="normal" image="Price_At_Pos_5.png">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="Price_At_Pos_5Selected.png">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="tenderNumPadButtonAction:" destination="-1" eventType="touchUpInside" id="zMe-Z0-ueR"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="MML-br-gdl" userLabel="Button 6">
+                            <rect key="frame" x="206" y="106" width="84" height="84"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
+                            <state key="normal" image="Price_At_Pos_6.png">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="Price_At_Pos_6Selected.png">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="tenderNumPadButtonAction:" destination="-1" eventType="touchUpInside" id="q22-SI-C0d"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Rpd-rK-MVe" userLabel="Button 7">
+                            <rect key="frame" x="34" y="192" width="84" height="84"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
+                            <state key="normal" image="Price_At_Pos_7.png">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="Price_At_Pos_7Selected.png">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="tenderNumPadButtonAction:" destination="-1" eventType="touchUpInside" id="8GT-Y1-K11"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dsx-R0-zxo" userLabel="Button 9">
+                            <rect key="frame" x="206" y="192" width="84" height="84"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
+                            <state key="normal" image="Price_At_Pos_9.png">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="Price_At_Pos_9Selected.png">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="tenderNumPadButtonAction:" destination="-1" eventType="touchUpInside" id="TDn-fx-6u0"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" tag="-99" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="HKH-ub-B00" userLabel="Button Clear">
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                            <state key="normal" title="Clear" backgroundImage="GlobalWhite.png">
+                                <color key="titleColor" red="0.0" green="0.4431372549" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" backgroundImage="globalgreen.png">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="tenderNumPadButtonAction:" destination="-1" eventType="touchUpInside" id="r1h-qn-WZl"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="-98" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="eZp-Hl-lZ9" userLabel="Button delete number">
+                            <rect key="frame" x="34" y="278" width="84" height="84"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
+                            <state key="normal" image="Price_At_Pos_Clear.png">
+                                <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="Price_At_Pos_ClaerSelected.png">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="tenderNumPadButtonAction:" destination="-1" eventType="touchUpInside" id="Bli-zB-Mhe"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="XZw-Td-O7G" userLabel="Button 0">
+                            <rect key="frame" x="120" y="278" width="84" height="84"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
+                            <state key="normal" image="Price_At_Pos_0.png">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="Price_At_Pos_0Selected.png">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="tenderNumPadButtonAction:" destination="-1" eventType="touchUpInside" id="kpw-D8-TcM"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hSw-zt-qcy" userLabel="Button 00">
+                            <rect key="frame" x="206" y="278" width="84" height="84"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
+                            <state key="normal" image="Price_At_Pos_00.png">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="Price_At_Pos_00Selected.png">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="tenderNumPadButtonAction:" destination="-1" eventType="touchUpInside" id="C2Z-8b-Iui"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="551" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bLB-qh-Mab" userLabel="Button - Enter">
+                            <rect key="frame" x="170" y="395" width="115" height="35"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="15"/>
+                            <state key="normal" title="ENTER" backgroundImage="btn_bg.png">
+                                <color key="titleColor" red="0.078431372550000003" green="0.1333333333" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" backgroundImage="globalblue.png"/>
+                            <state key="highlighted" backgroundImage="orange1px.png">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="enterBtnAction:" destination="-1" eventType="touchUpInside" id="mPi-bD-faC"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="552" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="UYA-22-rjw" userLabel="Button - Cancel">
+                            <rect key="frame" x="40" y="395" width="115" height="35"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                            <state key="normal" image="RCREditItemCancel.png">
+                                <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="RCREditItemCancelSelected.png">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="enterBtnAction:" destination="-1" eventType="touchUpInside" id="dV3-fR-6uo"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="P8y-Bq-0ue" userLabel="Button 8">
+                            <rect key="frame" x="120" y="192" width="84" height="84"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
+                            <state key="normal" image="Price_At_Pos_8.png">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="Price_At_Pos_8Sected.png">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="tenderNumPadButtonAction:" destination="-1" eventType="touchUpInside" id="Lrt-MQ-MuL"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="GlobalWhite.png" width="1" height="1"/>
+        <image name="Price_At_Pos_0.png" width="70" height="70"/>
+        <image name="Price_At_Pos_00.png" width="70" height="70"/>
+        <image name="Price_At_Pos_00Selected.png" width="83" height="83"/>
+        <image name="Price_At_Pos_0Selected.png" width="83" height="83"/>
+        <image name="Price_At_Pos_1.png" width="70" height="70"/>
+        <image name="Price_At_Pos_1Selected.png" width="83" height="83"/>
+        <image name="Price_At_Pos_2.png" width="70" height="70"/>
+        <image name="Price_At_Pos_2Selected.png" width="83" height="83"/>
+        <image name="Price_At_Pos_3.png" width="70" height="70"/>
+        <image name="Price_At_Pos_3Selected.png" width="83" height="83"/>
+        <image name="Price_At_Pos_4.png" width="70" height="70"/>
+        <image name="Price_At_Pos_4Selected.png" width="83" height="83"/>
+        <image name="Price_At_Pos_5.png" width="70" height="70"/>
+        <image name="Price_At_Pos_5Selected.png" width="83" height="83"/>
+        <image name="Price_At_Pos_6.png" width="70" height="70"/>
+        <image name="Price_At_Pos_6Selected.png" width="83" height="83"/>
+        <image name="Price_At_Pos_7.png" width="70" height="70"/>
+        <image name="Price_At_Pos_7Selected.png" width="83" height="83"/>
+        <image name="Price_At_Pos_8.png" width="70" height="70"/>
+        <image name="Price_At_Pos_8Sected.png" width="83" height="83"/>
+        <image name="Price_At_Pos_9.png" width="70" height="70"/>
+        <image name="Price_At_Pos_9Selected.png" width="83" height="83"/>
+        <image name="Price_At_Pos_ClaerSelected.png" width="83" height="83"/>
+        <image name="Price_At_Pos_Clear.png" width="70" height="70"/>
+        <image name="RCREditItemCancel.png" width="117" height="35"/>
+        <image name="RCREditItemCancelSelected.png" width="117" height="35"/>
+        <image name="RCRPopup_Header.png" width="772" height="138"/>
+        <image name="btn_bg.png" width="134" height="37"/>
+        <image name="globalblue.png" width="1" height="1"/>
+        <image name="globalgreen.png" width="1" height="1"/>
+        <image name="orange1px.png" width="1" height="1"/>
+        <image name="quantitypopup.png" width="335" height="596"/>
+    </resources>
+</document>

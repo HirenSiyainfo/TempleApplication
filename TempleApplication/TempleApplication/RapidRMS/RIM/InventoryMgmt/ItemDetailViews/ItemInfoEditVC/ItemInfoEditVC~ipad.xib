@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ItemInfoEditVC">
+            <connections>
+                <outlet property="btnSave" destination="LdM-JL-gJt" id="c9N-Wf-ujd"/>
+                <outlet property="btn_DeleteRecord" destination="KOb-Ug-hhI" id="5Lp-2l-6IF"/>
+                <outlet property="editViewContainer" destination="2yX-CV-HQe" id="Ax4-zp-mOx"/>
+                <outlet property="itemDiscountBtn" destination="OAq-fQ-Bpd" id="V1f-BN-n0H"/>
+                <outlet property="itemHistroyBtn" destination="ya4-Cc-Pjz" id="s9Z-0B-Oej"/>
+                <outlet property="itemInfoBtn" destination="q7b-O4-E5Y" id="oAZ-vI-POu"/>
+                <outlet property="itemOptionBtn" destination="Asp-Gx-2fj" id="y10-ev-Xwt"/>
+                <outlet property="itemPricingBtn" destination="Uhe-b7-Acz" id="ngu-Gp-g5g"/>
+                <outlet property="parentItemInfoView" destination="u0o-Hy-Fow" id="sCk-UD-FRh"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="648" height="768"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="CCh-is-W6n" userLabel="Back Button">
+                    <rect key="frame" x="20" y="28" width="40" height="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" image="backbtn.png">
+                        <color key="titleColor" red="0.1215686275" green="0.61176470589999998" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted" image="backbtnSelected.png"/>
+                    <connections>
+                        <action selector="dismissSplitter:" destination="-1" eventType="touchUpInside" id="rhq-f3-Nra"/>
+                    </connections>
+                </button>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Management" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fbn-T8-Myc" userLabel="Label - viewname">
+                    <rect key="frame" x="387" y="28" width="250" height="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" id="u0o-Hy-Fow" userLabel="View - item view">
+                    <rect key="frame" x="0.0" y="76" width="648" height="630"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" id="2yX-CV-HQe" userLabel="View Base View">
+                            <rect key="frame" x="74" y="0.0" width="574" height="630"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
+                        <view contentMode="scaleToFill" id="Run-5U-zbb" userLabel="Button Container">
+                            <rect key="frame" x="0.0" y="0.0" width="80" height="630"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" tag="1111" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="q7b-O4-E5Y" userLabel="Button - Info">
+                                    <rect key="frame" x="0.0" y="0.0" width="80" height="126"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                    <state key="normal" image="riminfo.png">
+                                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="selected" image="riminfoselected.png">
+                                        <color key="titleColor" red="0.0" green="0.50980392159999999" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="ChangeDisplayEditView:" destination="-1" eventType="touchUpInside" id="N7z-Em-tWy"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="5555" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Uhe-b7-Acz" userLabel="Button - Pricing">
+                                    <rect key="frame" x="0.0" y="126" width="80" height="126"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                    <state key="normal" image="rimpricing.png">
+                                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="selected" image="rimpricingselected.png">
+                                        <color key="titleColor" red="0.0" green="0.50980392159999999" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="ChangeDisplayEditView:" destination="-1" eventType="touchUpInside" id="zWC-dK-GvP"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="2222" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="OAq-fQ-Bpd" userLabel="Button - Discount">
+                                    <rect key="frame" x="0.0" y="252" width="80" height="126"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                    <state key="normal" image="rimdiscount.png">
+                                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="selected" image="rimdiscountselected.png">
+                                        <color key="titleColor" red="0.0" green="0.50980392159999999" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="ChangeDisplayEditView:" destination="-1" eventType="touchUpInside" id="9ch-kK-cct"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="3333" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ya4-Cc-Pjz" userLabel="Button - History">
+                                    <rect key="frame" x="0.0" y="378" width="80" height="126"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                    <state key="normal" image="rimhistory.png">
+                                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="selected" image="rimhistoryselected.png">
+                                        <color key="titleColor" red="0.0" green="0.50980392159999999" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="ChangeDisplayEditView:" destination="-1" eventType="touchUpInside" id="9ja-56-rqh"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="4444" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Asp-Gx-2fj" userLabel="Button - Option">
+                                    <rect key="frame" x="0.0" y="504" width="80" height="126"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                    <state key="normal" image="rimoptions.png">
+                                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="selected" image="rimoptionsselected.png">
+                                        <color key="titleColor" red="0.0" green="0.50980392159999999" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="ChangeDisplayEditView:" destination="-1" eventType="touchUpInside" id="LMn-et-tUI"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.89411764709999997" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view contentMode="scaleToFill" id="rUx-Rx-MrD" userLabel="View - Footer">
+                    <rect key="frame" x="0.0" y="706" width="648" height="62"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="LdM-JL-gJt" userLabel="Button - save">
+                            <rect key="frame" x="246" y="0.0" width="78" height="62"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <state key="normal" image="RIM_Footer_Save"/>
+                            <state key="highlighted" image="RIM_Footer_Save_sel" backgroundImage="MMDbtnOrangeSelected.png"/>
+                            <connections>
+                                <action selector="btnSaveItemClicked:" destination="-1" eventType="touchUpInside" id="Lp4-v2-Ata"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="KOb-Ug-hhI" userLabel="Button - delete">
+                            <rect key="frame" x="324" y="0.0" width="78" height="62"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <inset key="insetFor6xAndEarlier" minX="-25" minY="0.0" maxX="25" maxY="0.0"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <state key="normal" image="RIM_Footer_Delete"/>
+                            <state key="highlighted" image="RIM_Footer_Delete_sel" backgroundImage="MMDbtnOrangeSelected.png"/>
+                            <connections>
+                                <action selector="btn_DeleteRecord:" destination="-1" eventType="touchUpInside" id="zZP-bP-xGb"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.086274509803921567" green="0.074509803921568626" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="290" y="117"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="MMDbtnOrangeSelected.png" width="1" height="1"/>
+        <image name="RIM_Footer_Delete" width="40" height="36"/>
+        <image name="RIM_Footer_Delete_sel" width="40" height="36"/>
+        <image name="RIM_Footer_Save" width="27" height="36"/>
+        <image name="RIM_Footer_Save_sel" width="27" height="36"/>
+        <image name="backbtn.png" width="37" height="37"/>
+        <image name="backbtnSelected.png" width="37" height="37"/>
+        <image name="rimdiscount.png" width="80" height="126"/>
+        <image name="rimdiscountselected.png" width="80" height="126"/>
+        <image name="rimhistory.png" width="80" height="126"/>
+        <image name="rimhistoryselected.png" width="80" height="126"/>
+        <image name="riminfo.png" width="80" height="126"/>
+        <image name="riminfoselected.png" width="80" height="126"/>
+        <image name="rimoptions.png" width="80" height="126"/>
+        <image name="rimoptionsselected.png" width="80" height="126"/>
+        <image name="rimpricing.png" width="80" height="126"/>
+        <image name="rimpricingselected.png" width="80" height="126"/>
+    </resources>
+</document>

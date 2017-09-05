@@ -1,0 +1,313 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+  <style>
+  
+  .main{ width:700px;  background:#FFFFFF; overflow-y:scroll;}
+  .topSpace{ height:0px; background:rgb(255,255,255);}
+  .tital{ height:100px; background:rgb(247,247,247); border-top:1px solid #cfcfcf; border-bottom:1px solid #cfcfcf;}
+  .body{ margin-left:80px; margin-top:50px;}
+  .leftTable tr td{ font-size:17px; line-height:25px;}
+  .leftTable tr td:first-child{ width:216px;}
+  .leftTable tr td:last-child{ width:216px;}
+  .leftTable{ float:left;}
+  .righTable{ }
+  body,html{ margin:0px; padding:0px;height:700px; overflow-y:scroll;}
+  </style>
+<body>
+
+	<div class="main" style="width:684px; margin:auto; font-family:'Helvetica Neue', Helvetica">
+    <div class="topSpace"></div>
+    <div class="tital" style="height:100px; background:rgb(247,247,247); border-top:1px solid #cfcfcf; border-bottom:1px solid #cfcfcf;">
+    	<table width="100%" style="margin-top:15px; text-align:center;">
+        <tr style="font-size:24px; line-height:40px;">
+        <td>
+    $$Shift$$
+
+</td>
+
+</tr>
+       <tr style="font-size:17px;">
+        <td>
+  
+[Register Name]  |   [User Name]
+</td>
+
+</tr>
+</table>
+    </div>
+    <div class="body">
+    <table class="leftTable" width="475" border="0" cellpadding="0" cellspacing="0" style="float:left;">
+        <tr bgcolor="color:rgb(170,170,170)" >
+            <td>OFFLINE</td>
+        </tr>
+        $$SHIFT_STAR_END_DATE$$
+  <tr style="color:rgb(0,115,170);">
+  <td width="216">Gross Sales:</td>
+  <td width="216">$$GROSS_SALES$$</td>
+  </tr>
+  <tr style="color:rgb(0,115,170);">
+      <td width="216">Taxes:</td>
+  <td width="216">$$TAXES$$</td>
+  </tr>
+  <tr style="color:rgb(0,115,170);">
+      <td width="216">Net Sales:</td>
+      <td width="216">$$NET_SALES$$</td>
+  </tr>
+  <tr>
+      <td height="20"></td>
+      <td></td>
+  </tr>
+  $$FUELSUMMERY$$
+  <tr style="color:rgb(0,115,170);">
+    <td width="216">Opening Amount</td>
+    <td width="216">$$OPENING_AMOUNT$$</td>
+  </tr>
+  <tr>
+      <td height="5"></td>
+  </tr>
+
+  <tr>
+    <td>Sales</td>
+    <td>$$SALE$$</td>
+  </tr>
+  <tr>
+    <td>Return</td>
+    <td>$$RETURN$$</td>
+  </tr>
+
+  <tr style="font-weight:bold;">
+      <td>Net Total</td>
+      <td>$$NET_TOTAL$$</td>
+  </tr>
+  <tr>
+      <td height="5"></td>
+  </tr>
+
+  <tr>
+    <td>Taxes</td>
+    <td>$$TAXES$$</td>
+  </tr>
+  <tr>
+    <td>SurCharge</td>
+    <td>$$DEBIT_SURCHARGE$$</td>
+  </tr>
+  <tr>
+      <td>Gift Card</td>
+      <td>$$GIFT_CARD$$</td>
+  </tr>
+  <tr>
+      <td>Money Order</td>
+      <td>$$MONEY_ORDER$$</td>
+  </tr>
+
+$$TIPS$$
+
+   <tr style="font-weight:bold;">
+    <td>Total</td>
+    <td>$$TOTAL_1$$</td>
+  </tr>
+  
+  <tr>
+    <td height="20"></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Drop Amount</td>
+    <td>$$DROPS$$</td>
+  </tr>
+  <tr>
+      <td>Payout</td>
+      <td>$$PAYOUT$$</td>
+  </tr>
+  <tr style="color:rgb(0,115,170);">
+    <td>Closing Amount</td>
+    <td>$$CLOSING_AMOUNT$$</td>
+  </tr>
+  <tr>
+      <td>$$TENDER_TRANSACTION$$</td>
+  </tr>
+  <tr style="font-weight:bold;">
+    <td>Total</td>
+    <td>$$TOTAL_2$$</td>
+  </tr>
+  <tr>
+    <td height="20"></td>
+    <td></td>
+  </tr>
+   <tr style="color:rgb(0,115,170); font-weight:bold;">
+    <td>Over / Short</td>
+    <td>$$OVER / SHORT$$</td>
+  </tr>
+  <tr>
+    <td height="20"></td>
+    <td></td>
+  </tr>
+  <tr>
+      <td>$$DISCOUNT_DETAIL$$</td>
+  </tr>
+  <tr style="font-weight:bold;">
+      <td>Total</td>
+      <td>$$TOTAL_DISCOUNT_SALES$$</td>
+      <td>$$TOTAL_DISCOUNT_AMOUNT$$</td>
+      <td>$$TOTAL_DISCOUNT_COUNT$$</td>
+  </tr>
+  <tr>
+      <td height="20"></td>
+      <td></td>
+  </tr>
+  <tr>
+      <td>$$TENDER_TRANSACTION_DETAIL$$</td>
+  </tr>
+  <tr style="font-weight:bold;">
+      <td>Total</td>
+      <td>$$TOTAL_3$$</td>
+      <td>$$TOTAL_COUNT$$</td>
+  </tr>
+<tr>
+    <td height="20"></td>
+    <td></td>
+</tr>
+<tr>
+    <td>$$TENDER_TIPS_DETAIL$$</td>
+</tr>
+
+$$TENDER_TIPS_DETAIL_FOOTER$$
+
+<tr>
+    <td height="20"></td>
+    <td></td>
+</tr>
+<tr>
+    <td>$$GIFT_CARD_TRANSACTION_DETAIL$$</td>
+</tr>
+<tr style="font-weight:bold;">
+    <td>Total</td>
+    <td></td>
+    <td>$$GC_TOTAL$$</td>
+    <td>$$GC_COUNT$$</td>
+</tr>
+
+</table>
+	<table class="righTable" style="float:left; width:125px; text-align:center; ">
+
+<tr style="color:rgb(0,115,170);font-size:24px;">
+    <td>$$GC_LIABIALITY$$</td>
+</tr>
+
+<tr style="color:rgb(0,115,170); font-size:17px;">
+    <td>GC Liabiality</td>
+</tr>
+<tr>
+    <td height="20"></td>
+</tr>
+<tr style="color:rgb(0,115,170);font-size:24px;">
+    <td>$$CHECK_CASH$$</td>
+</tr>
+
+<tr style="color:rgb(0,115,170); font-size:17px;">
+    <td>Check Cash</td>
+</tr>
+
+<tr>
+    <td height="20"></td>
+    
+</tr>
+
+<tr style="color:rgb(0,115,170);font-size:24px;">
+    <td>$$TTD$$</td>
+    
+</tr>
+<tr style="color:rgb(0,115,170); font-size:17px;">
+    
+    <td>Discount</td>
+</tr>
+
+<tr>
+    <td height="20"></td>
+</tr>
+<tr style="color:rgb(0,115,170);font-size:24px;">
+<td>$$NON_TAX_SALES$$</td>
+</tr>
+
+<tr style="color:rgb(0,115,170); font-size:17px;">
+<td>Non-Tax Sales</td>
+</tr>
+
+<tr>
+<td height="20"></td>
+</tr>
+
+</tr>
+<tr style="color:rgb(0,115,170);font-size:24px;">
+    <td>$$NSC$$</td>
+    
+</tr>
+<tr style="color:rgb(0,115,170); font-size:17px;">
+    
+    <td>No Sale Count</td>
+</tr>
+<tr>
+    <td height="20"></td>
+    </tr>
+    
+    <tr style="color:rgb(0,115,170);font-size:24px;">
+        <td>$$ABT$$</td>
+        
+    </tr>
+    <tr style="color:rgb(0,115,170); font-size:17px;">
+        
+        <td>Void Trans</td>
+    </tr>
+    <tr>
+        <td height="20"></td>
+        
+        
+    </tr>
+
+
+<tr style="color:rgb(0,115,170);font-size:24px;">
+    <td>$$LINE_ITEM_VOID$$</td>
+    
+</tr>
+<tr style="color:rgb(0,115,170); font-size:17px;">
+    
+    <td>Line-Item Void</td>
+</tr>
+<tr>
+    <td height="20"></td>
+    
+</tr>
+
+   <tr style="color:rgb(0,115,170);font-size:24px;">
+      <td>$$CSC$$</td>
+  
+  </tr>
+	<tr style="color:rgb(0,115,170); font-size:17px;">
+  
+     <td>Customer Count</td>
+  </tr>
+  <tr>
+    <td height="20"></td>
+  
+  </tr>
+  
+  <tr style="color:rgb(0,115,170);font-size:24px;">
+      <td>$$AVG_TICKET$$</td>
+      
+  </tr>
+  <tr style="color:rgb(0,115,170); font-size:17px;">
+      
+      <td>Avg Ticket</td>
+  </tr>
+    </table>
+
+	
+</div>
+</div>
+
+</body>
+</html>
