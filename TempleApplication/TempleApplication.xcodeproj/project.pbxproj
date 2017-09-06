@@ -6211,7 +6211,6 @@
 		925324581F59703500662D2D /* Zreport_Email.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Zreport_Email.html; sourceTree = "<group>"; };
 		925324591F59703500662D2D /* CustomerLoyalty.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CustomerLoyalty.storyboard; sourceTree = "<group>"; };
 		9253245B1F59703500662D2D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		9253245C1F59703500662D2D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9253259E1F59703500662D2D /* GasPump.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GasPump.storyboard; sourceTree = "<group>"; };
 		925326231F59703500662D2D /* ICStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ICStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		925326241F59703500662D2D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -22259,6 +22258,7 @@
 				TargetAttributes = {
 					9B1903A01F5935D600F37C71 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 9UQF5C7AJR;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -27059,7 +27059,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				92531E521F59703200662D2D /* Base */,
-				9253245C1F59703500662D2D /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -27097,9 +27096,11 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = NO;
 				CLANG_WARN_UNREACHABLE_CODE = NO;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Harsh Patel (J2GCMY996L)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Harsh Patel (J2GCMY996L)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 9UQF5C7AJR;
 				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				ENABLE_TESTABILITY = NO;
@@ -27126,6 +27127,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
+				PROVISIONING_PROFILE = "b728b99d-c214-40cf-b7b6-5f59b3fd5354";
 				SDKROOT = iphoneos;
 				STRIP_INSTALLED_PRODUCT = NO;
 				TARGETED_DEVICE_FAMILY = 2;
@@ -27154,9 +27156,11 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = NO;
 				CLANG_WARN_UNREACHABLE_CODE = NO;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Harsh Patel (J2GCMY996L)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Harsh Patel (J2GCMY996L)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 9UQF5C7AJR;
 				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
@@ -27177,6 +27181,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
+				PROVISIONING_PROFILE = "b728b99d-c214-40cf-b7b6-5f59b3fd5354";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
@@ -27192,7 +27197,10 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				CLANG_WARN_INFINITE_RECURSION = NO;
 				CLANG_WARN_SUSPICIOUS_MOVE = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Harsh Patel (J2GCMY996L)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Harsh Patel (J2GCMY996L)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 9UQF5C7AJR;
 				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				ENABLE_TESTABILITY = NO;
@@ -27236,8 +27244,9 @@
 					"\"$(SRCROOT)/TempleApplication/libraries/Magtek/Release-iphonesimulator/libMTSCRA.a\"",
 				);
 				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Localization.TempleApplication;
+				PRODUCT_BUNDLE_IDENTIFIER = com.templeapplication.pos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b728b99d-c214-40cf-b7b6-5f59b3fd5354";
 				STRIP_INSTALLED_PRODUCT = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -27252,7 +27261,10 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				CLANG_WARN_INFINITE_RECURSION = NO;
 				CLANG_WARN_SUSPICIOUS_MOVE = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Harsh Patel (J2GCMY996L)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Harsh Patel (J2GCMY996L)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 9UQF5C7AJR;
 				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				ENABLE_TESTABILITY = NO;
@@ -27286,8 +27298,9 @@
 				MTL_ENABLE_DEBUG_INFO = "-O";
 				OTHER_LDFLAGS = "-ObjC";
 				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Localization.TempleApplication;
+				PRODUCT_BUNDLE_IDENTIFIER = com.templeapplication.pos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b728b99d-c214-40cf-b7b6-5f59b3fd5354";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

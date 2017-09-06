@@ -4,51 +4,74 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>${PRODUCT_NAME}</string>
 	<key>CFBundleExecutable</key>
-	<string>$(EXECUTABLE_NAME)</string>
+	<string>${EXECUTABLE_NAME}</string>
+	<key>CFBundleIcons</key>
+	<dict>
+		<key>CFBundlePrimaryIcon</key>
+		<dict>
+			<key>CFBundleIconFiles</key>
+			<array>
+				<string>Spotlight-&amp;-Settings---iPhone2x</string>
+				<string>Spotlight-&amp;-Settings---iOS7</string>
+				<string>Home----iPhone-iOS72x</string>
+			</array>
+		</dict>
+	</dict>
+	<key>CFBundleIcons~ipad</key>
+	<dict>
+		<key>CFBundlePrimaryIcon</key>
+		<dict>
+			<key>CFBundleIconFiles</key>
+			<array>
+				<string>Spotlight-&amp;-Settings---iPhone</string>
+				<string>Spotlight-&amp;-Settings---iPhone2x</string>
+				<string>Spotlight-&amp;-Settings---iOS7</string>
+				<string>Spotlight---iOS7</string>
+				<string>Home---iPad-iOS72x</string>
+				<string>Home---iPad-iOS7</string>
+				<string>Home----iPod-iOS7</string>
+			</array>
+		</dict>
+	</dict>
 	<key>CFBundleIdentifier</key>
-	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<string>com.templeapplication.pos</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>$(PRODUCT_NAME)</string>
+	<string>${PRODUCT_NAME}</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>2.4</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb1416573398588466</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
-	<string>1</string>
-	<key>LSRequiresIPhoneOS</key>
-	<true/>
-	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
-	<key>UIMainStoryboardFile</key>
-	<string>Main_iPhone</string>
-	<key>UIRequiredDeviceCapabilities</key>
-	<array>
-		<string>armv7</string>
-	</array>
-	<key>UISupportedInterfaceOrientations</key>
-	<array>
-		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationPortraitUpsideDown</string>
-	</array>
-	<key>UISupportedInterfaceOrientations~ipad</key>
-	<array>
-		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationPortraitUpsideDown</string>
-	</array>
+	<string>2.4.20</string>
 	<key>FacebookAppID</key>
 	<string>1416573398588466</string>
 	<key>FacebookDisplayName</key>
 	<string>Demo</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
 	<key>NSBluetoothPeripheralUsageDescription</key>
-	<string>RapidRMS requires to enable bluetooth to support bluetooth devices like receipt printers and barcode scanners.</string>
+	<string>TampleApp requires to enable bluetooth to support bluetooth devices like receipt printers and barcode scanners.</string>
 	<key>NSCameraUsageDescription</key>
 	<string>$(PRODUCT_NAME) needs access to the camera to take photos.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
@@ -66,5 +89,38 @@
 		<string>location</string>
 		<string>remote-notification</string>
 	</array>
+	<key>UIMainStoryboardFile</key>
+	<string>Main_iPhone</string>
+	<key>UIMainStoryboardFile~ipad</key>
+	<string>Main</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UIRequiresFullScreen</key>
+	<true/>
+	<key>UISupportedExternalAccessoryProtocols</key>
+	<array>
+		<string>com.datecs.linea.pro.msr</string>
+		<string>com.datecs.linea.pro.bar</string>
+		<string>com.datecs.printer.escpos</string>
+		<string>com.datecs.iserial.communication</string>
+		<string>com.datecs.pinpad</string>
+		<string>jp.star-m.starpro</string>
+		<string>com.magtek.idynamo</string>
+		<string>com.idtechproducts.reader</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 </dict>
 </plist>

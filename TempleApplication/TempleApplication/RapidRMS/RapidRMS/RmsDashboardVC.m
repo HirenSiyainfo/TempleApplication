@@ -127,21 +127,21 @@
         if (isRcractive)
         {
             [self.dashBoardArray addObject:@"Cash Register"];
-            if (self.rmsDbController.isInternetRechable)
-            {
-                [self.dashBoardArray addObject:@"Clock In-Out"];
-                [self.dashBoardArray addObject:@"Shift In-Out"];
-                [self.dashBoardArray addObject:@"Daily Report"];
-            }
+         //   if (self.rmsDbController.isInternetRechable)
+           // {
+               // [self.dashBoardArray addObject:@"Clock In-Out"];
+              //  [self.dashBoardArray addObject:@"Shift In-Out"];
+               // [self.dashBoardArray addObject:@"Daily Report"];
+         //   }
         }
-        BOOL isRcrGasactive = [self isRcrGasActive];
-        if (isRcrGasactive)
-        {
-            if (self.rmsDbController.isInternetRechable)
-            {
-                [self.dashBoardArray addObject:@"Rcr Gas"];
-            }
-        }
+//        BOOL isRcrGasactive = [self isRcrGasActive];
+//        if (isRcrGasactive)
+//        {
+//            if (self.rmsDbController.isInternetRechable)
+//            {
+//                [self.dashBoardArray addObject:@"Rcr Gas"];
+//            }
+//        }
     }
     BOOL isRimActive = [self isRimActive];
     if (isRimActive)
@@ -149,70 +149,70 @@
         if (self.rmsDbController.isInternetRechable)
         {
             [self.dashBoardArray addObject:@"Inventory Management"];
-            [self.dashBoardArray addObject:@"Inventory Count"];
+        //    [self.dashBoardArray addObject:@"Inventory Count"];
 
         //    if([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone)
           //  {
            // }
         }
     }
-    BOOL isPurChaseActive = [self isPurchaseOrdeActive];
-    if (isPurChaseActive)
-    {
-        if (self.rmsDbController.isInternetRechable)
-        {
-            [self.dashBoardArray addObject:@"Purchase Order"];
-            if([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad)
-            {
-                [self.dashBoardArray addObject:@"Manual Entry"];
-            }
-        }
-    }
+//    BOOL isPurChaseActive = [self isPurchaseOrdeActive];
+//    if (isPurChaseActive)
+//    {
+//        if (self.rmsDbController.isInternetRechable)
+//        {
+//            [self.dashBoardArray addObject:@"Purchase Order"];
+//            if([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad)
+//            {
+//                [self.dashBoardArray addObject:@"Manual Entry"];
+//            }
+//        }
+//    }
     //    if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
-    {
-        BOOL isManagementPortal = [self isManagementPortal];
-        if (isManagementPortal)
-        {
-            if (self.rmsDbController.isInternetRechable)
-            {
-                [self.dashBoardArray addObject:@"Management Portal"];
-            }
-        }
-    }
+//    {
+//        BOOL isManagementPortal = [self isManagementPortal];
+//        if (isManagementPortal)
+//        {
+//            if (self.rmsDbController.isInternetRechable)
+//            {
+//                [self.dashBoardArray addObject:@"Management Portal"];
+//            }
+//        }
+//    }
     
     //// Change with Ticket Validation
     objConfiguration = [UpdateManager getConfigurationMoc:self.managedObjectContext];
-    BOOL isTicket =  objConfiguration.localTicketSetting.boolValue;
-    if (isTicket == YES)
-    {
-        if (self.rmsDbController.isInternetRechable)
-        {
-            if([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad)
-            {
-                [self.dashBoardArray addObject:@"Ticket Validation"];
-            }
-        }
-    }
+//    BOOL isTicket =  objConfiguration.localTicketSetting.boolValue;
+//    if (isTicket == YES)
+//    {
+//        if (self.rmsDbController.isInternetRechable)
+//        {
+//            if([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad)
+//            {
+//                [self.dashBoardArray addObject:@"Ticket Validation"];
+//            }
+//        }
+//    }
     
-    objConfiguration = [UpdateManager getConfigurationMoc:self.managedObjectContext];
-    BOOL isCustomerLoyalty =  objConfiguration.localCustomerLoyalty.boolValue;
-    if (isCustomerLoyalty == YES)
-    {
-        if (self.rmsDbController.isInternetRechable)
-        {
-            if([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad)
-            {
-                [self.dashBoardArray addObject:@"Customer Loyalty"];
-            }
-        }
-    }
+//    objConfiguration = [UpdateManager getConfigurationMoc:self.managedObjectContext];
+//    BOOL isCustomerLoyalty =  objConfiguration.localCustomerLoyalty.boolValue;
+//    if (isCustomerLoyalty == YES)
+//    {
+//        if (self.rmsDbController.isInternetRechable)
+//        {
+//            if([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad)
+//            {
+//                [self.dashBoardArray addObject:@"Customer Loyalty"];
+//            }
+//        }
+//    }
     
     [self.moduleCollectionView reloadData];
 #pragma mark - MMD -
-    if(self.rmsDbController.isInternetRechable && [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
-    {
-        [self.dashBoardArray addObject:@"Discount"];
-    }
+//    if(self.rmsDbController.isInternetRechable && [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+//    {
+//        [self.dashBoardArray addObject:@"Discount"];
+//    }
 }
 
 - (void)loadDashBoardModuleIcons
@@ -230,12 +230,12 @@
         
         self.dashBoardArray = [finalArrayToDisplay mutableCopy];
 #pragma mark - MMD -
-        if(self.rmsDbController.isInternetRechable && [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
-        {
-            [self.dashBoardArray addObject:@"Discount"];
-            [self.dashBoardArray addObject:@"Inventory Count"];
-
-        }
+//        if(self.rmsDbController.isInternetRechable && [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+//        {
+//           // [self.dashBoardArray addObject:@"Discount"];
+//           // [self.dashBoardArray addObject:@"Inventory Count"];
+//
+//        }
     }
     else
     {
@@ -699,12 +699,12 @@
         cell.moduleIconImage.highlightedImage = [UIImage imageNamed:@"gasPumpActive.png"];
         cell.moduleName.text = @"GAS PRICES";
     }
-    else if([(self.dashBoardArray)[indexPath.row] isEqualToString:@"Discount"])
-    {
-        cell.moduleIconImage.image = [UIImage imageNamed:@"discount.png"];
-        cell.moduleIconImage.highlightedImage = [UIImage imageNamed:@"discount_selected.png"];
-        cell.moduleName.text = @"PROMOTIONS";
-    }
+//    else if([(self.dashBoardArray)[indexPath.row] isEqualToString:@"Discount"])
+//    {
+//        cell.moduleIconImage.image = [UIImage imageNamed:@"discount.png"];
+//        cell.moduleIconImage.highlightedImage = [UIImage imageNamed:@"discount_selected.png"];
+//        cell.moduleName.text = @"PROMOTIONS";
+//    }
     return cell;
 }
 
@@ -907,14 +907,14 @@
             callModule = @"RIM";
         }
     }
-    else if([(self.dashBoardArray)[indexPath.row] isEqualToString:@"Discount"])
-    {
-        MMDiscountListVC * mMDiscountListVC =
-        [[UIStoryboard storyboardWithName:@"MMDiscount"
-                                   bundle:NULL] instantiateViewControllerWithIdentifier:@"MMDiscountListVC_sid"];
-        
-        [self.navigationController pushViewController:mMDiscountListVC animated:YES];
-    }
+//    else if([(self.dashBoardArray)[indexPath.row] isEqualToString:@"Discount"])
+//    {
+//        MMDiscountListVC * mMDiscountListVC =
+//        [[UIStoryboard storyboardWithName:@"MMDiscount"
+//                                   bundle:NULL] instantiateViewControllerWithIdentifier:@"MMDiscountListVC_sid"];
+//        
+//        [self.navigationController pushViewController:mMDiscountListVC animated:YES];
+//    }
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.001 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self.rmsDbController launchLoginScreenWithSelectedModule:selectedModule callModule:callModule];
     });
