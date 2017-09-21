@@ -10,6 +10,8 @@
 #import "RasterPrintJob.h"
 #import "PaxConstants.h"
 #import "RasterPrintJobBase.h"
+#import "RmsDbController.h"
+#import "Customer.h"
 
 @implementation InvoiceReceiptPrint
 
@@ -52,7 +54,8 @@
     [self TryPrinter:portName printData:printData withDelegate:delegate];
     return self;
 }
-- (instancetype)initWithPortName:(NSString *)portName portSetting:(NSString *)portSettings printData:(NSArray *)printData withPaymentDatail:(NSArray *)paymentDatail tipSetting:(NSNumber *)tipSetting tipsPercentArray:(NSArray *)tipsPercentArray receiptDate:(NSString *)reciptDate
+
+- (instancetype)initWithPortName:(NSString *)portName portSetting:(NSString *)portSettings printData:(NSArray *)printData withPaymentDatail:(NSArray *)paymentDatail tipSetting:(NSNumber *)tipSetting tipsPercentArray:(NSArray *)tipsPercentArray receiptDate:(NSString *)reciptDate withMasterDetail:(NSArray *)masterDetail
 {
     self = [super init];
     if (self) {
@@ -65,7 +68,7 @@
         arrTipsPercent = [tipsPercentArray mutableCopy];
         rmsDbController = [RmsDbController sharedRmsDbController];
         self.crmController = [RcrController sharedCrmController];
-
+        masterArray = masterDetail;
         
         [self validateData];
         receiptDataKeys = @[
@@ -215,7 +218,7 @@
 {
     
     NSString *html = @"";
-    html = [[NSBundle mainBundle] pathForResource:@"emailReceipt" ofType:@"html"];
+    html = [[NSBundle mainBundle] pathForResource:@"emailReceipt_Temple" ofType:@"html"];
     html = [NSString stringWithContentsOfFile:html encoding:NSUTF8StringEncoding error:nil];
    
     NSString *fileURLString = [[[NSBundle mainBundle] URLForResource:@"zigzag" withExtension:@"png"] absoluteString];
@@ -281,7 +284,7 @@
     html = [html stringByReplacingOccurrencesOfString:@"$$Header1$$" withString:str1];
     NSString *str2 = [NSString stringWithFormat:@"Your Invoice # is %@",strInvoiceNo];
     html = [html stringByReplacingOccurrencesOfString:@"$$Header2$$" withString:str2];
-    
+    //style="min-height: 300px;"
     /* NSInteger currentPaymentImageIndex = 0;
      if([paymentDatailsArray isKindOfClass:[NSArray class]] && [paymentDatailsArray count] > 0){
      
@@ -300,7 +303,7 @@
      }
      }*/
     
-    NSString *strDiscount = [self discountTotalForReceipt];
+   /* NSString *strDiscount = [self discountTotalForReceipt];
     
     float discount = [rmsDbController removeCurrencyFomatter:strDiscount];
     if (discount != 0 && discount > 0) {
@@ -309,7 +312,8 @@
     else
     {
         html = [html stringByReplacingOccurrencesOfString:@"$$DISCOUNT$$" withString:@""];
-    }
+    }*/
+    
     
     if ((rmsDbController.globalDict)[@"ReceiptMasterInfo"] && [(rmsDbController.globalDict)[@"ReceiptMasterInfo"] count] > 0) {
         html = [html stringByReplacingOccurrencesOfString:@"$$BRANCH_NAME$$" withString:[NSString stringWithFormat:@"%@",(rmsDbController.globalDict)[@"ReceiptMasterInfo"] [@"StoreName"]]];
@@ -325,22 +329,41 @@
     else {
         html = [html stringByReplacingOccurrencesOfString:@"$$ADDRESS$$" withString:[NSString stringWithFormat:@"%@%@",[self branchInfoValueForKeyIndex:ReceiptDataKeyAddress1],[self branchInfoValueForKeyIndex:ReceiptDataKeyAddress2]]];
     }
+    
+    if ((rmsDbController.globalDict)[@"BranchInfo"] && [(rmsDbController.globalDict)[@"BranchInfo"] isKindOfClass:[NSDictionary class]]) {
+        NSDictionary *branchInfo = (rmsDbController.globalDict)[@"BranchInfo"];
+        if (branchInfo != nil && ![branchInfo[@"ZipCode"] isKindOfClass:[NSNull class]]) {
+            NSString *zipCode = [NSString stringWithFormat:@"%@", branchInfo[@"ZipCode"]];
+            html =  [html stringByReplacingOccurrencesOfString:@"$$STATE_CITY_ZIPCODE$$" withString:[NSString stringWithFormat:@"%@",zipCode]];
+        }
+        else
+        {
+            html =  [html stringByReplacingOccurrencesOfString:@"$$STATE_CITY_ZIPCODE$$" withString:@""];
+          }
+    }
+    else{
+        html =  [html stringByReplacingOccurrencesOfString:@"$$STATE_CITY_ZIPCODE$$" withString:@""];
+    }
+    
+    html =  [html stringByReplacingOccurrencesOfString:@"$$Tax_Id$$" withString:[NSString stringWithFormat:@"Tax Id:"]];
+    
+    
     if ((rmsDbController.globalDict)[@"ReceiptMasterInfo"] && [(rmsDbController.globalDict)[@"ReceiptMasterInfo"] count] > 0) {
         if ((rmsDbController.globalDict)[@"ReceiptMasterInfo"] [@"Email"] && [(rmsDbController.globalDict)[@"ReceiptMasterInfo"] [@"Email"] length] > 0) {
-            NSString *email = [NSString stringWithFormat:@"%@", (rmsDbController.globalDict)[@"ReceiptMasterInfo"] [@"Email"]];
             NSString *phoneNo = [NSString stringWithFormat:@"%@", (rmsDbController.globalDict)[@"ReceiptMasterInfo"] [@"PhoneNo"]];
-            html =  [html stringByReplacingOccurrencesOfString:@"$$STATE_CITY_ZIPCODE$$" withString:[NSString stringWithFormat:@"%@ - %@",email,phoneNo]];
+            html =  [html stringByReplacingOccurrencesOfString:@"$$Phone$$" withString:[NSString stringWithFormat:@"PhoneNo : %@",phoneNo]];
         }
         else
         {
             NSString *phoneNo = [NSString stringWithFormat:@"%@", (rmsDbController.globalDict)[@"ReceiptMasterInfo"] [@"PhoneNo"]];
-            html =  [html stringByReplacingOccurrencesOfString:@"$$STATE_CITY_ZIPCODE$$" withString:[NSString stringWithFormat:@"%@",phoneNo]];
+            html =  [html stringByReplacingOccurrencesOfString:@"$$Phone$$" withString:[NSString stringWithFormat:@"%@",phoneNo]];
         }
     }
     else {
         html =  [html stringByReplacingOccurrencesOfString:@"$$STATE_CITY_ZIPCODE$$" withString:[NSString stringWithFormat:@"%@%@%@",[self branchInfoValueForKeyIndex:ReceiptDataKeyCity],[self branchInfoValueForKeyIndex:ReceiptDataKeyState],[self branchInfoValueForKeyIndex:ReceiptDataKeyZipCode]]];
     }
-    html = [html stringByReplacingOccurrencesOfString:@"$$TRANSACTION_NO$$" withString:[NSString stringWithFormat:@"%@",strInvoiceNo]];
+    
+    html = [html stringByReplacingOccurrencesOfString:@"$$TRANSACTION_NO$$" withString:[NSString stringWithFormat:@"Invoice #: %@",strInvoiceNo]];
     
     NSString *strCashierName = @"";
     
@@ -359,23 +382,95 @@
 
     html = [html stringByReplacingOccurrencesOfString:@"$$REGISTER_NAME$$" withString:[NSString stringWithFormat:@"%@",strRegister]];
     
-    if ((rmsDbController.globalDict)[@"ReceiptMasterInfo"] && [(rmsDbController.globalDict)[@"ReceiptMasterInfo"] count] > 0 && (rmsDbController.globalDict)[@"ReceiptMasterInfo"] [@"ThanksNote"] && [(rmsDbController.globalDict)[@"ReceiptMasterInfo"] [@"ThanksNote"] length] > 0) {
-        NSString *thanksMessage = [NSString stringWithFormat:@"%@", (rmsDbController.globalDict)[@"ReceiptMasterInfo"] [@"ThanksNote"]];
-        html = [html stringByReplacingOccurrencesOfString:@"$$HELPMESSAGE1$$" withString:[NSString stringWithFormat:@"%@",thanksMessage]];
-        html = [html stringByReplacingOccurrencesOfString:@"$$BRANCH_NAME$$" withString:@""];
-        html = [html stringByReplacingOccurrencesOfString:@"$$HELPMESSAGE2$$" withString:@""];
-        html = [html stringByReplacingOccurrencesOfString:@"$$HELPMESSAGE3$$" withString:@""];
-    }
-    else {
-        html = [html stringByReplacingOccurrencesOfString:@"$$HELPMESSAGE1$$" withString:[NSString stringWithFormat:@"%@",[self branchInfoValueForKeyIndex:ReceiptDataKeyHelpMessage1]]];
-        html = [html stringByReplacingOccurrencesOfString:@"$$BRANCH_NAME$$" withString:[NSString stringWithFormat:@"%@",[self branchInfoValueForKeyIndex:ReceiptDataKeyBranchName]]];
-        html = [html stringByReplacingOccurrencesOfString:@"$$HELPMESSAGE2$$" withString:[NSString stringWithFormat:@"%@",[self branchInfoValueForKeyIndex:ReceiptDataKeyHelpMessage2]]];
-        html = [html stringByReplacingOccurrencesOfString:@"$$HELPMESSAGE3$$" withString:[NSString stringWithFormat:@"%@",[self branchInfoValueForKeyIndex:ReceiptDataKeyHelpMessage3]]];
-    }
+//    if ((rmsDbController.globalDict)[@"ReceiptMasterInfo"] && [(rmsDbController.globalDict)[@"ReceiptMasterInfo"] count] > 0 && (rmsDbController.globalDict)[@"ReceiptMasterInfo"] [@"ThanksNote"] && [(rmsDbController.globalDict)[@"ReceiptMasterInfo"] [@"ThanksNote"] length] > 0) {
+//        NSString *thanksMessage = [NSString stringWithFormat:@"%@", (rmsDbController.globalDict)[@"ReceiptMasterInfo"] [@"ThanksNote"]];
+//        html = [html stringByReplacingOccurrencesOfString:@"$$HELPMESSAGE1$$" withString:[NSString stringWithFormat:@"%@",thanksMessage]];
+//        html = [html stringByReplacingOccurrencesOfString:@"$$BRANCH_NAME$$" withString:@""];
+//        html = [html stringByReplacingOccurrencesOfString:@"$$HELPMESSAGE2$$" withString:@""];
+//        html = [html stringByReplacingOccurrencesOfString:@"$$HELPMESSAGE3$$" withString:@""];
+//    }
+//    else {
+//        html = [html stringByReplacingOccurrencesOfString:@"$$HELPMESSAGE1$$" withString:[NSString stringWithFormat:@"%@",[self branchInfoValueForKeyIndex:ReceiptDataKeyHelpMessage1]]];
+//        html = [html stringByReplacingOccurrencesOfString:@"$$BRANCH_NAME$$" withString:[NSString stringWithFormat:@"%@",[self branchInfoValueForKeyIndex:ReceiptDataKeyBranchName]]];
+//        html = [html stringByReplacingOccurrencesOfString:@"$$HELPMESSAGE2$$" withString:[NSString stringWithFormat:@"%@",[self branchInfoValueForKeyIndex:ReceiptDataKeyHelpMessage2]]];
+//        html = [html stringByReplacingOccurrencesOfString:@"$$HELPMESSAGE3$$" withString:[NSString stringWithFormat:@"%@",[self branchInfoValueForKeyIndex:ReceiptDataKeyHelpMessage3]]];
+//    }
     
+    
+    
+    html = [html stringByReplacingOccurrencesOfString:@"$$FedralId$$" withString:@"Federal ID#:- 20-846174"];
+
     if (strReceiptDate) {
-        html = [html stringByReplacingOccurrencesOfString:@"$$TRNXDATE$$" withString:strReceiptDate];
+        html = [html stringByReplacingOccurrencesOfString:@"$$TRNXDATE$$" withString:[NSString stringWithFormat:@"TrnxDate : %@",strReceiptDate]];
     }
+    // NON-PROFIT ORGANIZATION TAX EXAMPT FEDERAL ID#:- 20-8461747 Acknowledge  your priceless tax deduction contribution with sincere thanks
+    html = [html stringByReplacingOccurrencesOfString:@"$$Notes$$" withString:@"NOTE :"];
+
+    html = [html stringByReplacingOccurrencesOfString:@"$$Tax_Id:$$" withString:@"Tax Id :"];
+
+    
+    
+    if (masterArray != nil) {
+        NSNumber *customerIdNumber = [[masterArray firstObject]valueForKey:@"CustId"];
+        NSString *customerId = [NSString stringWithFormat: @"%@",customerIdNumber];
+        if (![customerId isEqualToString:@""]) {
+            NSManagedObjectContext *manageObjectContext = rmsDbController.managedObjectContext;
+            
+            NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+            
+            NSEntityDescription *entity = [NSEntityDescription
+                                           entityForName:@"Customer" inManagedObjectContext:manageObjectContext];
+            fetchRequest.entity = entity;
+            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"custId == %@", customerId];
+            fetchRequest.predicate = predicate;
+            
+            // NSError *error;
+            NSArray *resultSet = [UpdateManager executeForContext:manageObjectContext FetchRequest:fetchRequest];
+            if (resultSet.count>0)
+            {
+                Customer *customer = (Customer *)[resultSet firstObject];
+                html = [html stringByReplacingOccurrencesOfString:@"$$Customer_Name$$" withString:[NSString stringWithFormat:@"%@",[NSString stringWithFormat:@"Name : %@ %@",customer.firstName,customer.lastName]]];
+                html = [html stringByReplacingOccurrencesOfString:@"$$CustomerAddress$$" withString:[NSString stringWithFormat:@"%@",[NSString stringWithFormat:@"Address : %@%@",customer.address1,customer.address1]]];
+                html = [html stringByReplacingOccurrencesOfString:@"$$ZipCode$$" withString:[NSString stringWithFormat:@"%@",[NSString stringWithFormat:@"Email : %@",customer.email]]];
+                html = [html stringByReplacingOccurrencesOfString:@"$$Customer_Phone$$" withString:[NSString stringWithFormat:@"%@",[NSString stringWithFormat:@"Phone : %@",customer.contactNo]]];
+            }
+            else
+            {
+                html = [html stringByReplacingOccurrencesOfString:@"$$Customer_Name$$" withString:@"Name : "];
+                html = [html stringByReplacingOccurrencesOfString:@"$$CustomerAddress$$" withString:@"Address : "];
+                html = [html stringByReplacingOccurrencesOfString:@"$$ZipCode$$" withString:@"Email : "];
+                html = [html stringByReplacingOccurrencesOfString:@"$$Customer_Phone$$" withString:@"Phone : "];
+            }
+      }
+        else
+        {
+            html = [html stringByReplacingOccurrencesOfString:@"$$Customer_Name$$" withString:@"Name : "];
+            html = [html stringByReplacingOccurrencesOfString:@"$$CustomerAddress$$" withString:@"Address : "];
+            html = [html stringByReplacingOccurrencesOfString:@"$$ZipCode$$" withString:@"Email : "];
+            html = [html stringByReplacingOccurrencesOfString:@"$$Customer_Phone$$" withString:@"Phone : "];
+        }
+
+    }
+    else
+    {
+        html = [html stringByReplacingOccurrencesOfString:@"$$Customer_Name$$" withString:@"Name : "];
+        html = [html stringByReplacingOccurrencesOfString:@"$$CustomerAddress$$" withString:@"Address : "];
+        html = [html stringByReplacingOccurrencesOfString:@"$$ZipCode$$" withString:@"Email : "];
+        html = [html stringByReplacingOccurrencesOfString:@"$$Customer_Phone$$" withString:@"Phone : "];
+    }
+
+    
+    if ([self isCheckPaymentIsAvailable] == TRUE) {
+        html = [html stringByReplacingOccurrencesOfString:@"$$ChequeMessage$$" withString:@"Make All Check Paybale To"];
+    }
+    else
+    {
+        html = [html stringByReplacingOccurrencesOfString:@"$$ChequeMessage$$" withString:@""];
+    }
+    html = [html stringByReplacingOccurrencesOfString:@"$$NOTEMESAGE$$" withString:@"NON-PROFIT ORGANIZATION TAX EXAMPT FEDERAL ID#:- 20-8461747 Acknowledge  your priceless tax deduction contribution with sincere thanks"];
+
+    
+    
        NSDate * date = [NSDate date];
     //Create the dateformatter object
     NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
@@ -390,6 +485,18 @@
     html = [html stringByReplacingOccurrencesOfString:@"$$CURRENTDATE$$" withString:printDate];
     
     return html;
+}
+
+-(BOOL)isCheckPaymentIsAvailable{
+    
+    BOOL isCheckPaymentIsAvailable = FALSE;
+    
+    NSPredicate *predicatecheque= [NSPredicate predicateWithFormat:@"PaymentType = %@",@"Check"];
+    NSArray *chequeArray = [paymentDatailsArray filteredArrayUsingPredicate:predicatecheque];
+    if (chequeArray.count > 0) {
+        isCheckPaymentIsAvailable = TRUE;
+    }
+    return isCheckPaymentIsAvailable;
 }
 
 - (id)branchInfoValueForKeyIndex:(ReceiptDataKey)index

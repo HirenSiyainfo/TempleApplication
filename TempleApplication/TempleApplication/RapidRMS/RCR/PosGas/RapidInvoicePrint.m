@@ -443,7 +443,7 @@ typedef NS_ENUM(NSInteger, RapidPrintProcess) {
         
         if([self isPrepayTransaction:arrayPumpCart]){
           
-            LastGasInvoiceReceiptPrint *gaslastInvoiceReceiptPrint = [[LastGasInvoiceReceiptPrint alloc] initWithPortName:printerPortName portSetting:printerPortSetting printData:itemDetail withPaymentDatail:paymentDetails tipSetting:tipSettings tipsPercentArray:tipPercentageDetail receiptDate:lastInvoiceDate];
+            LastGasInvoiceReceiptPrint *gaslastInvoiceReceiptPrint = [[LastGasInvoiceReceiptPrint alloc] initWithPortName:printerPortName portSetting:printerPortSetting printData:itemDetail withPaymentDatail:paymentDetails tipSetting:tipSettings tipsPercentArray:tipPercentageDetail receiptDate:lastInvoiceDate withMasterDetail:masterDetails];
             gaslastInvoiceReceiptPrint.arrPumpCartArray = arrayPumpCart;
             gaslastInvoiceReceiptPrint.isInvoiceReceipt = self.isInvoiceReceipt;
             gaslastInvoiceReceiptPrint.registerName = self.registerName;
@@ -452,7 +452,7 @@ typedef NS_ENUM(NSInteger, RapidPrintProcess) {
             [gaslastInvoiceReceiptPrint printInvoiceReceiptForInvoiceNo:[masterDetails.firstObject valueForKey:@"RegisterInvNo"] withChangeDue:changeDueValue withDelegate:self];
         }
         else{
-            LastPostpayGasInvoiceReceiptPrint *postpaylastInvoiceReceiptPrint = [[LastPostpayGasInvoiceReceiptPrint alloc] initWithPortName:printerPortName portSetting:printerPortSetting printData:itemDetail withPaymentDatail:paymentDetails tipSetting:tipSettings tipsPercentArray:tipPercentageDetail receiptDate:lastInvoiceDate];
+            LastPostpayGasInvoiceReceiptPrint *postpaylastInvoiceReceiptPrint = [[LastPostpayGasInvoiceReceiptPrint alloc] initWithPortName:printerPortName portSetting:printerPortSetting printData:itemDetail withPaymentDatail:paymentDetails tipSetting:tipSettings tipsPercentArray:tipPercentageDetail receiptDate:lastInvoiceDate withMasterDetail:masterDetails];
             postpaylastInvoiceReceiptPrint.arrPumpCartArray = arrayPumpCart;
             postpaylastInvoiceReceiptPrint.isInvoiceReceipt = self.isInvoiceReceipt;
             postpaylastInvoiceReceiptPrint.registerName = self.registerName;
@@ -462,7 +462,7 @@ typedef NS_ENUM(NSInteger, RapidPrintProcess) {
         }
     }
     else{
-        LastInvoiceReceiptPrint *lastInvoiceReceiptPrint = [[LastInvoiceReceiptPrint alloc] initWithPortName:printerPortName portSetting:printerPortSetting printData:itemDetail withPaymentDatail:paymentDetails tipSetting:tipSettings tipsPercentArray:tipPercentageDetail receiptDate:lastInvoiceDate];
+        LastInvoiceReceiptPrint *lastInvoiceReceiptPrint = [[LastInvoiceReceiptPrint alloc] initWithPortName:printerPortName portSetting:printerPortSetting printData:itemDetail withPaymentDatail:paymentDetails tipSetting:tipSettings tipsPercentArray:tipPercentageDetail receiptDate:lastInvoiceDate withMasterDetail:masterDetails];
         lastInvoiceReceiptPrint.isInvoiceReceipt = self.isInvoiceReceipt;
         lastInvoiceReceiptPrint.registerName = self.registerName;
         lastInvoiceReceiptPrint.cashierName = self.cashierName;

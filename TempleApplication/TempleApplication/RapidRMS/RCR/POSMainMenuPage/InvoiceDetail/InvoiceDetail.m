@@ -3414,7 +3414,7 @@ typedef NS_ENUM(NSInteger, InvoicePrintProcess) {
 //    else
 //    {
         NSString *receiptDate = [NSString stringWithFormat:@"%@ %@",strinvoiceDate,strinvoiceTime];
-        LastInvoiceReceiptPrint *lastInvoiceReceiptPrint = [[LastInvoiceReceiptPrint alloc] initWithPortName:portName portSetting:portSettings printData:itemDetails withPaymentDatail:paymentArray tipSetting:self.tipSetting tipsPercentArray:nil receiptDate:receiptDate];
+        LastInvoiceReceiptPrint *lastInvoiceReceiptPrint = [[LastInvoiceReceiptPrint alloc] initWithPortName:portName portSetting:portSettings printData:itemDetails withPaymentDatail:paymentArray tipSetting:self.tipSetting tipsPercentArray:nil receiptDate:receiptDate withMasterDetail:[[self.InvRcptDetail valueForKey:@"InvoiceMst"] firstObject]];
         [lastInvoiceReceiptPrint printInvoiceReceiptForInvoiceNo:_lblLastInvoiceNo.text withChangeDue:_lblLastChangeDue.text withDelegate:self];
 //    }
 //
@@ -3434,7 +3434,7 @@ typedef NS_ENUM(NSInteger, InvoicePrintProcess) {
     
     UIAlertActionHandler rightHandler = ^ (UIAlertAction *action)
     {
-        [self printTenderProcess];
+        [self previewandPrintReport:nil];
         return ;
 
     };
@@ -4141,7 +4141,7 @@ typedef NS_ENUM(NSInteger, InvoicePrintProcess) {
         
         if([self isPrepayTransaction:arrayPumpCart]){
             
-            LastGasInvoiceReceiptPrint *gaslastInvoiceReceiptPrint = [[LastGasInvoiceReceiptPrint alloc] initWithPortName:portName portSetting:portSettings printData:itemDetails withPaymentDatail:paymentArray tipSetting:self.tipSetting tipsPercentArray:nil receiptDate:receiptDate];
+            LastGasInvoiceReceiptPrint *gaslastInvoiceReceiptPrint = [[LastGasInvoiceReceiptPrint alloc] initWithPortName:portName portSetting:portSettings printData:itemDetails withPaymentDatail:paymentArray tipSetting:self.tipSetting tipsPercentArray:nil receiptDate:receiptDate withMasterDetail:[[self.InvRcptDetail valueForKey:@"InvoiceMst"] firstObject]];
              gaslastInvoiceReceiptPrint.isInvoiceReceipt = YES;
             NSMutableArray *InvoiceMst =[[self.InvRcptDetail valueForKey:@"InvoiceMst"]firstObject];
             BOOL isOffline = [[InvoiceMst.firstObject valueForKey:@"IsOffline"] boolValue];
@@ -4159,7 +4159,7 @@ typedef NS_ENUM(NSInteger, InvoicePrintProcess) {
         }
         else{
             
-            LastPostpayGasInvoiceReceiptPrint *postpaylastInvoiceReceiptPrint = [[LastPostpayGasInvoiceReceiptPrint alloc] initWithPortName:portName portSetting:portSettings printData:itemDetails withPaymentDatail:paymentArray tipSetting:self.tipSetting tipsPercentArray:nil receiptDate:receiptDate];
+            LastPostpayGasInvoiceReceiptPrint *postpaylastInvoiceReceiptPrint = [[LastPostpayGasInvoiceReceiptPrint alloc] initWithPortName:portName portSetting:portSettings printData:itemDetails withPaymentDatail:paymentArray tipSetting:self.tipSetting tipsPercentArray:nil receiptDate:receiptDate withMasterDetail:[[self.InvRcptDetail valueForKey:@"InvoiceMst"] firstObject]];
              postpaylastInvoiceReceiptPrint.isInvoiceReceipt = YES;
             NSMutableArray *InvoiceMst =[[self.InvRcptDetail valueForKey:@"InvoiceMst"]firstObject];
             BOOL isOffline = [[InvoiceMst.firstObject valueForKey:@"IsOffline"] boolValue];
@@ -4177,7 +4177,7 @@ typedef NS_ENUM(NSInteger, InvoicePrintProcess) {
         }
     }
     else{
-        LastInvoiceReceiptPrint *lastInvoiceReceiptPrint = [[LastInvoiceReceiptPrint alloc] initWithPortName:portName portSetting:portSettings printData:itemDetails withPaymentDatail:paymentArray tipSetting:self.tipSetting tipsPercentArray:nil receiptDate:receiptDate];
+        LastInvoiceReceiptPrint *lastInvoiceReceiptPrint = [[LastInvoiceReceiptPrint alloc] initWithPortName:portName portSetting:portSettings printData:itemDetails withPaymentDatail:paymentArray tipSetting:self.tipSetting tipsPercentArray:nil receiptDate:receiptDate withMasterDetail:[[self.InvRcptDetail valueForKey:@"InvoiceMst"] firstObject]];
         lastInvoiceReceiptPrint.isInvoiceReceipt = YES;
         
         NSMutableArray *InvoiceMst =[[self.InvRcptDetail valueForKey:@"InvoiceMst"]firstObject];

@@ -51,7 +51,6 @@
             
             
             
-            
         case TP_OPENCASH_DRAWER:
         {
             [self.tenderViewController setStatusmessage:@"" withWarning:FALSE];

@@ -87,7 +87,7 @@ typedef enum TenderReceiptPrintEmailProcess {
 
 
 
-@interface TenderViewController () <MFMailComposeViewControllerDelegate,tipsSelectionDeletage,TipsAdjustmentVcDelegate,UITextFieldDelegate,CustomerSelectionDelegate,PrinterFunctionsDelegate,RapidInvoicePrintDelegate,PaxDeviceDelegate , TenderGiftCardProcessVCDelegate , EmailFromViewControllerDelegate , NSKeyedArchiverDelegate,EBTAdjustmentVCDelegate>
+@interface TenderViewController () <MFMailComposeViewControllerDelegate,tipsSelectionDeletage,TipsAdjustmentVcDelegate,UITextFieldDelegate,CustomerSelectionDelegate,PrinterFunctionsDelegate,RapidInvoicePrintDelegate,PaxDeviceDelegate , TenderGiftCardProcessVCDelegate , EmailFromViewControllerDelegate , NSKeyedArchiverDelegate,EBTAdjustmentVCDelegate,NDHTMLtoPDFDelegate,UIDocumentInteractionControllerDelegate>
 {
     GiftCardPosVC *giftcardVC;
     PaxDevice *paxDevice;
@@ -137,7 +137,9 @@ typedef enum TenderReceiptPrintEmailProcess {
     NSMutableArray *paxVoidArray;
     NSInteger voidCardNumber;
     NSString *paxSerialNo;
+    
 }
+@property (nonatomic, strong) UIDocumentInteractionController *controller;
 
 @property (nonatomic, weak) IBOutlet UIButton *btnIntercom;
 @property (nonatomic, weak) IBOutlet UIButton *btnDone;
@@ -189,6 +191,7 @@ typedef enum TenderReceiptPrintEmailProcess {
 @property (nonatomic, strong) RcrController *crmController;
 @property (nonatomic, strong) RmsDbController *rmsDbController;
 @property (nonatomic, strong) PaymentData *paymentData;
+@property (nonatomic, strong) NDHTMLtoPDF *PDFCreator;
 
 @property (nonatomic,weak)IBOutlet UILabel *currentDate;
 
@@ -1477,12 +1480,14 @@ typedef enum TenderReceiptPrintEmailProcess {
 }
 -(IBAction)printTenderReceipt:(id)sender
 {
-    tenderReceiptPrintEmailProcess = TenderReceiptPrint;
+    [self showPreviewOfInvoice];
+    
+    /*tenderReceiptPrintEmailProcess = TenderReceiptPrint;
     _activityIndicator = [RmsActivityIndicator showActivityIndicator:self.view];
 
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self printTenderProcess];
-    });
+    });*/
 }
 
 -(IBAction)printTenderReceiptAndEmail:(id)sender
@@ -3497,34 +3502,41 @@ typedef enum TenderReceiptPrintEmailProcess {
     NSMutableArray *masterDetails = [[self.Payparam valueForKey:@"InvoiceDetail" ] valueForKey:@"InvoiceMst"];
     NSString *receiptDate = [self invoiceRecieptDate:[[masterDetails.firstObject firstObject] valueForKey:@"Datetime"]];
 
-    NSString *regInvNo = [masterDetails.firstObject  valueForKey:@"RegisterInvNo"];
+//    NSString *regInvNo = [masterDetails.firstObject  valueForKey:@"RegisterInvNo"];
     
-    NSMutableArray *pumpCart = [[self processForPumpCart:regInvNo]mutableCopy];
-    if(pumpCart.count == 0){
-        // for PrePay
-        pumpCart = [[self processForPumpCartPrepay] mutableCopy];
-    }
     
-    if([self.rmsDbController checkGasPumpisActive] && pumpCart.count > 0){
-        
-        if([self isPrepayTransaction:pumpCart]){
-            
-            GasInvoiceReceiptPrint *gasinvoiceReceiptPrint = [[GasInvoiceReceiptPrint alloc] initWithPortName:portName portSetting:portSettings printData:[self reciptDataAryForBillOrder] withPaymentDatail:[self.paymentData invoicePaymentdetail] tipSetting:self.tipSetting tipsPercentArray:self.tipsPercentArray receiptDate:receiptDate];
-            gasinvoiceReceiptPrint.arrPumpCartArray = pumpCart;
-               self.emailReciptHtml = [gasinvoiceReceiptPrint generateHtmlForInvoiceNo:self.strInvoiceNo withChangeDue:_lblDueAmount.text];
-            
-        }
-        else{
-            PostpayGasInvoiceReceiptPrint *postpaygasinvoiceReceiptPrint = [[PostpayGasInvoiceReceiptPrint alloc] initWithPortName:portName portSetting:portSettings printData:[self reciptDataAryForBillOrder] withPaymentDatail:[self.paymentData invoicePaymentdetail] tipSetting:self.tipSetting tipsPercentArray:self.tipsPercentArray receiptDate:receiptDate];
-            postpaygasinvoiceReceiptPrint.arrPumpCartArray = pumpCart;
-            self.emailReciptHtml = [postpaygasinvoiceReceiptPrint generateHtmlForInvoiceNo:self.paymentData.strInvoiceNo withChangeDue:_lblDueAmount.text];
-        }
-    }
-    else{
-        
-        InvoiceReceiptPrint *invoiceReceiptPrint = [[InvoiceReceiptPrint alloc] initWithPortName:portName portSetting:portSettings printData:[self reciptDataAryForBillOrder] withPaymentDatail:[self.paymentData invoicePaymentdetail] tipSetting:self.tipSetting tipsPercentArray:self.tipsPercentArray receiptDate:receiptDate];
-        self.emailReciptHtml = [invoiceReceiptPrint generateHtmlForInvoiceNo:self.paymentData.strInvoiceNo withChangeDue:_lblDueAmount.text];
-    }
+    
+    InvoiceReceiptPrint *invoiceReceiptPrint = [[InvoiceReceiptPrint alloc] initWithPortName:portName portSetting:portSettings printData:[self reciptDataAryForBillOrder] withPaymentDatail:[self.paymentData invoicePaymentdetail] tipSetting:self.tipSetting tipsPercentArray:self.tipsPercentArray receiptDate:receiptDate withMasterDetail:[self.paymentData tenderInvoiceMst]];
+    self.emailReciptHtml = [invoiceReceiptPrint generateHtmlForInvoiceNo:self.paymentData.strInvoiceNo withChangeDue:_lblDueAmount.text];
+
+    
+    
+//    NSMutableArray *pumpCart = [[self processForPumpCart:regInvNo]mutableCopy];
+//    if(pumpCart.count == 0){
+//        // for PrePay
+//        pumpCart = [[self processForPumpCartPrepay] mutableCopy];
+//    }
+    
+//    if([self.rmsDbController checkGasPumpisActive] && pumpCart.count > 0){
+//        
+//        if([self isPrepayTransaction:pumpCart]){
+//            
+//            GasInvoiceReceiptPrint *gasinvoiceReceiptPrint = [[GasInvoiceReceiptPrint alloc] initWithPortName:portName portSetting:portSettings printData:[self reciptDataAryForBillOrder] withPaymentDatail:[self.paymentData invoicePaymentdetail] tipSetting:self.tipSetting tipsPercentArray:self.tipsPercentArray receiptDate:receiptDate withMasterDetail:[self.paymentData tenderInvoiceMst]];
+//            gasinvoiceReceiptPrint.arrPumpCartArray = pumpCart;
+//               self.emailReciptHtml = [gasinvoiceReceiptPrint generateHtmlForInvoiceNo:self.strInvoiceNo withChangeDue:_lblDueAmount.text];
+//            
+//        }
+//        else{
+//            PostpayGasInvoiceReceiptPrint *postpaygasinvoiceReceiptPrint = [[PostpayGasInvoiceReceiptPrint alloc] initWithPortName:portName portSetting:portSettings printData:[self reciptDataAryForBillOrder] withPaymentDatail:[self.paymentData invoicePaymentdetail] tipSetting:self.tipSetting tipsPercentArray:self.tipsPercentArray receiptDate:receiptDate withMasterDetail:[self.paymentData tenderInvoiceMst]];
+//            postpaygasinvoiceReceiptPrint.arrPumpCartArray = pumpCart;
+//            self.emailReciptHtml = [postpaygasinvoiceReceiptPrint generateHtmlForInvoiceNo:self.paymentData.strInvoiceNo withChangeDue:_lblDueAmount.text];
+//        }
+//    }
+//    else{
+//        
+//        InvoiceReceiptPrint *invoiceReceiptPrint = [[InvoiceReceiptPrint alloc] initWithPortName:portName portSetting:portSettings printData:[self reciptDataAryForBillOrder] withPaymentDatail:[self.paymentData invoicePaymentdetail] tipSetting:self.tipSetting tipsPercentArray:self.tipsPercentArray receiptDate:receiptDate withMasterDetail:[self.paymentData tenderInvoiceMst]];
+//        self.emailReciptHtml = [invoiceReceiptPrint generateHtmlForInvoiceNo:self.paymentData.strInvoiceNo withChangeDue:_lblDueAmount.text];
+//    }
     
     //[self htmlBillText];
     
@@ -4061,13 +4073,13 @@ typedef enum TenderReceiptPrintEmailProcess {
         
         if([self isPrepayTransaction:gasArray]){
            
-            GasInvoiceReceiptPrint *gasinvoiceReceiptPrint = [[GasInvoiceReceiptPrint alloc] initWithPortName:portName portSetting:portSettings printData:[self reciptDataAryForBillOrder] withPaymentDatail:[self.paymentData invoicePaymentdetail] tipSetting:self.tipSetting tipsPercentArray:self.tipsPercentArray receiptDate:receiptDate];
+            GasInvoiceReceiptPrint *gasinvoiceReceiptPrint = [[GasInvoiceReceiptPrint alloc] initWithPortName:portName portSetting:portSettings printData:[self reciptDataAryForBillOrder] withPaymentDatail:[self.paymentData invoicePaymentdetail] tipSetting:self.tipSetting tipsPercentArray:self.tipsPercentArray receiptDate:receiptDate withMasterDetail:[self.paymentData tenderInvoiceMst]];
             gasinvoiceReceiptPrint.arrPumpCartArray = gasArray;
             [gasinvoiceReceiptPrint printInvoiceReceiptForInvoiceNo:self.strInvoiceNo withChangeDue:_lblDueAmount.text withDelegate:self];
 
         }
         else{
-            PostpayGasInvoiceReceiptPrint *postpaygasinvoiceReceiptPrint = [[PostpayGasInvoiceReceiptPrint alloc] initWithPortName:portName portSetting:portSettings printData:[self reciptDataAryForBillOrder] withPaymentDatail:[self.paymentData invoicePaymentdetail] tipSetting:self.tipSetting tipsPercentArray:self.tipsPercentArray receiptDate:receiptDate];
+            PostpayGasInvoiceReceiptPrint *postpaygasinvoiceReceiptPrint = [[PostpayGasInvoiceReceiptPrint alloc] initWithPortName:portName portSetting:portSettings printData:[self reciptDataAryForBillOrder] withPaymentDatail:[self.paymentData invoicePaymentdetail] tipSetting:self.tipSetting tipsPercentArray:self.tipsPercentArray receiptDate:receiptDate withMasterDetail:[self.paymentData tenderInvoiceMst]];
             postpaygasinvoiceReceiptPrint.arrPumpCartArray = gasArray;
             [postpaygasinvoiceReceiptPrint printInvoiceReceiptForInvoiceNo:self.paymentData.strInvoiceNo withChangeDue:_lblDueAmount.text withDelegate:self];
         }
@@ -4075,7 +4087,7 @@ typedef enum TenderReceiptPrintEmailProcess {
     }
     else{
        
-        InvoiceReceiptPrint *invoiceReceiptPrint = [[InvoiceReceiptPrint alloc] initWithPortName:portName portSetting:portSettings printData:[self reciptDataAryForBillOrder] withPaymentDatail:[self.paymentData invoicePaymentdetail] tipSetting:self.tipSetting tipsPercentArray:self.tipsPercentArray receiptDate:receiptDate];
+        InvoiceReceiptPrint *invoiceReceiptPrint = [[InvoiceReceiptPrint alloc] initWithPortName:portName portSetting:portSettings printData:[self reciptDataAryForBillOrder] withPaymentDatail:[self.paymentData invoicePaymentdetail] tipSetting:self.tipSetting tipsPercentArray:self.tipsPercentArray receiptDate:receiptDate withMasterDetail:[self.paymentData tenderInvoiceMst]];
         [invoiceReceiptPrint printInvoiceReceiptForInvoiceNo:self.paymentData.strInvoiceNo withChangeDue:_lblDueAmount.text withDelegate:self];
     }
 }
@@ -7431,4 +7443,61 @@ typedef enum TenderReceiptPrintEmailProcess {
     //  insert the offline data with signature to database...................
     [self insertLastInvoiceDataToLocalData];
 }
+
+-(void)showPreviewOfInvoice
+{
+    self.PDFCreator = [NDHTMLtoPDF createPDFWithURL:[[NSURL alloc]initFileURLWithPath:self.emailReciptHtml]
+                                         pathForPDF:@"~/Documents/TenderInvoice.pdf".stringByExpandingTildeInPath
+                                           delegate:self
+                                           pageSize:kPaperSizeA4
+                                            margins:UIEdgeInsetsMake(10, 5, 10, 5)];
+
+}
+
+- (void)HTMLtoPDFDidSucceed:(NDHTMLtoPDF*)htmlToPDF
+{
+    //    NSString *result = [NSString stringWithFormat:@"HTMLtoPDF did succeed (%@ / %@)", htmlToPDF, htmlToPDF.PDFpath];
+    [self openDocumentwithSharOption:htmlToPDF.PDFpath];
+}
+
+- (void)HTMLtoPDFDidFail:(NDHTMLtoPDF*)htmlToPDF
+{
+    //    NSString *result = [NSString stringWithFormat:@"HTMLtoPDF did fail (%@)", htmlToPDF];
+}
+
+-(void)openDocumentwithSharOption:(NSString *)strpdfUrl{
+    // here's a URL from our bundle
+    NSURL *documentURL = [[NSURL alloc]initFileURLWithPath:strpdfUrl];
+    
+    // pass it to our document interaction controller
+    self.controller.URL = documentURL;
+    // present the preview
+    [self.controller presentPreviewAnimated:YES];
+    
+}
+
+
+- (UIDocumentInteractionController *)controller {
+    
+    if (!_controller) {
+        _controller = [[UIDocumentInteractionController alloc]init];
+        _controller.delegate = self;
+    }
+    return _controller;
+}
+
+#pragma mark - Delegate Methods
+
+- (UIViewController *)documentInteractionControllerViewControllerForPreview:(UIDocumentInteractionController *)controller {
+    
+    return  self;
+}
+
+- (void)documentInteractionController:(UIDocumentInteractionController *)controller willBeginSendingToApplication:(NSString *)application {
+}
+
+- (void)documentInteractionController:(UIDocumentInteractionController *)controller didEndSendingToApplication:(NSString *)application {
+}
+
+
 @end

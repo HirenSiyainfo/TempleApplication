@@ -2286,7 +2286,7 @@ typedef NS_ENUM(NSInteger, LastPrintProcess) {
         portName     = [RcrController getPortName];
         portSettings = [RcrController getPortSettings];
         
-        LastInvoiceReceiptPrint *lastInvoiceReceiptPrint = [[LastInvoiceReceiptPrint alloc] initWithPortName:portName portSetting:portSettings printData:itemDetails withPaymentDatail:paymentArray tipSetting:self.tipSetting tipsPercentArray:nil receiptDate:lastInvoiceDate];
+        LastInvoiceReceiptPrint *lastInvoiceReceiptPrint = [[LastInvoiceReceiptPrint alloc] initWithPortName:portName portSetting:portSettings printData:itemDetails withPaymentDatail:paymentArray tipSetting:self.tipSetting tipsPercentArray:nil receiptDate:lastInvoiceDate withMasterDetail:[invoiceDetails.firstObject valueForKey:@"InvoiceMst"]];
         [lastInvoiceReceiptPrint printInvoiceReceiptForInvoiceNo:dictLastInvoiceInfo[@"LastInvoiceNo"] withChangeDue:dictLastInvoiceInfo[@"LastChangeDue"] withDelegate:self];
     }
     else
@@ -8594,13 +8594,13 @@ typedef NS_ENUM(NSInteger, LastPrintProcess) {
         }
         else{
             
-            lastInvoiceRcptPrint = [[LastInvoiceReceiptPrint alloc] initWithPortName:portName portSetting:portSettings printData:itemDetails withPaymentDatail:paymentArray tipSetting:self.tipSetting tipsPercentArray:nil receiptDate:lastInvoiceDate];
+            lastInvoiceRcptPrint = [[LastInvoiceReceiptPrint alloc] initWithPortName:portName portSetting:portSettings printData:itemDetails withPaymentDatail:paymentArray tipSetting:self.tipSetting tipsPercentArray:nil receiptDate:lastInvoiceDate withMasterDetail:[invoiceDetails.firstObject valueForKey:@"InvoiceMst"]];
             self.emailReciptHtml = [lastInvoiceRcptPrint generateHtmlForInvoiceNo:dictLastInvoiceInfo[@"LastInvoiceNo"] withChangeDue:dictLastInvoiceInfo[@"LastChangeDue"]];
         }
         
         
     self.PDFCreator = [NDHTMLtoPDF createPDFWithURL:[[NSURL alloc]initFileURLWithPath:self.emailReciptHtml]
-                                         pathForPDF:@"~/Documents/previewLastInvoice.pdf".stringByExpandingTildeInPath
+                                         pathForPDF:@"~/Documents/LastInvoice.pdf".stringByExpandingTildeInPath
                                            delegate:self
                                            pageSize:kPaperSizeA4
                                             margins:UIEdgeInsetsMake(10, 5, 10, 5)];
@@ -8682,6 +8682,19 @@ typedef NS_ENUM(NSInteger, LastPrintProcess) {
 
 - (IBAction)btnLastInvRcptClick:(UIButton *)sender
 {
+    RcrPosVC * __weak myWeakReference = self;
+    UIAlertActionHandler rightHandler = ^ (UIAlertAction *action)
+    {
+        [myWeakReference btnLastPreviewClick:nil];
+    };
+    
+    UIAlertActionHandler leftHandler = ^ (UIAlertAction *action)
+    {
+    };
+    [self.rmsDbController popupAlertFromVC:self title:@"Info" message:@"Do You Want To Print Last Receipt?" buttonTitles:@[@"No",@"Yes"] buttonHandlers:@[leftHandler,rightHandler]];
+    return;
+    
+    
     NSArray * lastInvoiceArray = [self fetchLastInvoiceArray];
     
     LastInvoiceData *lastInvoiceData = lastInvoiceArray.firstObject;

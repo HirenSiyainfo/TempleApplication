@@ -451,7 +451,7 @@
     formatter.dateFormat = @"MM/dd/yyyy HH:mm";
     NSString *newDate = [formatter stringFromDate:date];
     
-    LastInvoiceReceiptPrint *lastInvoiceReceiptPrint = [[LastInvoiceReceiptPrint alloc] initWithPortName:portName portSetting:portSettings printData:itemDetail withPaymentDatail:paymentArray tipSetting:tipSetting tipsPercentArray:nil receiptDate:newDate];
+    LastInvoiceReceiptPrint *lastInvoiceReceiptPrint = [[LastInvoiceReceiptPrint alloc] initWithPortName:portName portSetting:portSettings printData:itemDetail withPaymentDatail:paymentArray tipSetting:tipSetting tipsPercentArray:nil receiptDate:newDate withMasterDetail:masterDetail];
     cs_Invoice.htmlString = [lastInvoiceReceiptPrint generateHtmlForInvoiceNo:[masterDetail.firstObject valueForKey:@"RegisterInvNo"] withChangeDue:@""];
     
 }

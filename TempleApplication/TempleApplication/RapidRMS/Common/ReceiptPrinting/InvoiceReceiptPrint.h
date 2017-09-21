@@ -116,7 +116,8 @@ typedef NS_ENUM(NSInteger, ReceiptDataKey) {
     NSArray *arrTipsPercent;
     NSArray *receiptDataKeys;
     NSMutableDictionary *invoiceDetailDict;
-    
+    NSArray *masterArray;
+
     NSNumber *tipSettings;
     
     UIImage *customerSignatureImage;
@@ -144,7 +145,8 @@ typedef NS_ENUM(NSInteger, ReceiptDataKey) {
 @property(assign) BOOL isInvoiceReceipt;
 
 
-- (instancetype)initWithPortName:(NSString *)portName portSetting:(NSString *)portSettings printData:(NSArray *)printData withPaymentDatail:(NSArray *)paymentDatail tipSetting:(NSNumber *)tipSetting tipsPercentArray:(NSArray *)tipsPercentArray receiptDate:(NSString *)reciptDate NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithPortName:(NSString *)portName portSetting:(NSString *)portSettings printData:(NSArray *)printData withPaymentDatail:(NSArray *)paymentDatail tipSetting:(NSNumber *)tipSetting tipsPercentArray:(NSArray *)tipsPercentArray receiptDate:(NSString *)reciptDate withMasterDetail:(NSArray *)masterDetail
+ NS_DESIGNATED_INITIALIZER;
 
 - (instancetype)initWithDemoPortName:(NSString *)portName printData:(NSArray *)printData withDelegate:(id)delegate;
 

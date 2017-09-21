@@ -11,7 +11,7 @@
 @implementation LastPostpayGasInvoiceReceiptPrint
 - (instancetype)initWithPortName:(NSString *)portName portSetting:(NSString *)portSettings printData:(NSArray *)printData withPaymentDatail:(NSArray *)paymentDatail tipSetting:(NSNumber *)tipSetting tipsPercentArray:(NSArray *)tipsPercentArray receiptDate:(NSString *)reciptDate
 {
-    self = [super initWithPortName:portName portSetting:portSettings printData:printData withPaymentDatail:paymentDatail tipSetting:tipSetting tipsPercentArray:tipsPercentArray receiptDate:reciptDate];
+    self = [super initWithPortName:portName portSetting:portSettings printData:printData withPaymentDatail:paymentDatail tipSetting:tipSetting tipsPercentArray:tipsPercentArray receiptDate:reciptDate withMasterDetail:nil];
     if (self) {
         portNameForPrinter = portName;
         portSettingsForPrinter = portSettings;
