@@ -1830,7 +1830,6 @@
 		925342491F59704300662D2D /* RCRDiscounttogglebtnright.png in Resources */ = {isa = PBXBuildFile; fileRef = 92532B671F59703700662D2D /* RCRDiscounttogglebtnright.png */; };
 		9253424A1F59704300662D2D /* RCRDiscounttogglebtnrightselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 92532B681F59703700662D2D /* RCRDiscounttogglebtnrightselected.png */; };
 		9253424B1F59704300662D2D /* RCRDiscounttogglebtnselected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92532B691F59703700662D2D /* RCRDiscounttogglebtnselected@2x.png */; };
-		9253424C1F59704300662D2D /* recallsectionheader@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92532B6A1F59703700662D2D /* recallsectionheader@2x.png */; };
 		9253424D1F59704300662D2D /* RetailResto-addbtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92532B6B1F59703700662D2D /* RetailResto-addbtn@2x.png */; };
 		9253424E1F59704300662D2D /* RetailResto-addbtnforpatch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92532B6C1F59703700662D2D /* RetailResto-addbtnforpatch@2x.png */; };
 		9253424F1F59704300662D2D /* RetailResto-department@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92532B6D1F59703700662D2D /* RetailResto-department@2x.png */; };
@@ -2147,7 +2146,6 @@
 		925343861F59704400662D2D /* offlinebtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92532CAE1F59703800662D2D /* offlinebtn@2x.png */; };
 		925343871F59704400662D2D /* offlinebtnselected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92532CAF1F59703800662D2D /* offlinebtnselected@2x.png */; };
 		925343881F59704400662D2D /* patch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92532CB01F59703800662D2D /* patch@2x.png */; };
-		925343891F59704400662D2D /* plusicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92532CB11F59703800662D2D /* plusicon@2x.png */; };
 		9253438A1F59704400662D2D /* plusiconselected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92532CB21F59703800662D2D /* plusiconselected@2x.png */; };
 		9253438B1F59704400662D2D /* profilebtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92532CB31F59703800662D2D /* profilebtn@2x.png */; };
 		9253438C1F59704400662D2D /* profilebtnselected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92532CB41F59703800662D2D /* profilebtnselected@2x.png */; };
@@ -2709,7 +2707,6 @@
 		925345BD1F59704700662D2D /* lockicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 92532F621F59703900662D2D /* lockicon.png */; };
 		925345BE1F59704700662D2D /* loginbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 92532F631F59703900662D2D /* loginbox.png */; };
 		925345BF1F59704700662D2D /* plane.png in Resources */ = {isa = PBXBuildFile; fileRef = 92532F641F59703900662D2D /* plane.png */; };
-		925345C01F59704700662D2D /* retaillogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 92532F651F59703900662D2D /* retaillogo.png */; };
 		925345C11F59704700662D2D /* signin.png in Resources */ = {isa = PBXBuildFile; fileRef = 92532F661F59703900662D2D /* signin.png */; };
 		925345C21F59704700662D2D /* signinselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 92532F671F59703900662D2D /* signinselected.png */; };
 		925345C31F59704700662D2D /* signup.png in Resources */ = {isa = PBXBuildFile; fileRef = 92532F681F59703900662D2D /* signup.png */; };
@@ -2719,7 +2716,6 @@
 		925345C71F59704700662D2D /* lockicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92532F6D1F59703900662D2D /* lockicon@2x.png */; };
 		925345C81F59704700662D2D /* loginbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92532F6E1F59703900662D2D /* loginbox@2x.png */; };
 		925345C91F59704700662D2D /* plane@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92532F6F1F59703900662D2D /* plane@2x.png */; };
-		925345CA1F59704700662D2D /* retaillogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92532F701F59703900662D2D /* retaillogo@2x.png */; };
 		925345CB1F59704700662D2D /* signin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92532F711F59703900662D2D /* signin@2x.png */; };
 		925345CC1F59704700662D2D /* signinselected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92532F721F59703900662D2D /* signinselected@2x.png */; };
 		925345CD1F59704700662D2D /* signup@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92532F731F59703900662D2D /* signup@2x.png */; };
@@ -3710,7 +3706,6 @@
 		925349AE1F59704A00662D2D /* btn_menu8_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 925334B31F59703C00662D2D /* btn_menu8_selected.png */; };
 		925349AF1F59704A00662D2D /* btn_menu9.png in Resources */ = {isa = PBXBuildFile; fileRef = 925334B41F59703C00662D2D /* btn_menu9.png */; };
 		925349B01F59704A00662D2D /* btn_menu9_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 925334B51F59703C00662D2D /* btn_menu9_selected.png */; };
-		925349B11F59704A00662D2D /* btnenter_home.png in Resources */ = {isa = PBXBuildFile; fileRef = 925334B61F59703C00662D2D /* btnenter_home.png */; };
 		925349B21F59704A00662D2D /* EllipseDicLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 925334B71F59703C00662D2D /* EllipseDicLogo.png */; };
 		925349B31F59704A00662D2D /* tip_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 925334BA1F59703C00662D2D /* tip_icon@2x.png */; };
 		925349B41F59704A00662D2D /* transactionApprovalIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 925334BB1F59703C00662D2D /* transactionApprovalIcon@2x.png */; };
@@ -4696,7 +4691,6 @@
 		92534D8D1F59704F00662D2D /* syncselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 925339FB1F59703E00662D2D /* syncselected.png */; };
 		92534D8E1F59704F00662D2D /* syncselected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 925339FC1F59703E00662D2D /* syncselected@2x.png */; };
 		92534D8F1F59704F00662D2D /* TopNotificationIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 925339FD1F59703E00662D2D /* TopNotificationIcon@2x.png */; };
-		92534D901F59704F00662D2D /* Ticket_icn.png in Resources */ = {isa = PBXBuildFile; fileRef = 925339FE1F59703E00662D2D /* Ticket_icn.png */; };
 		92534D921F59704F00662D2D /* Ticket_icn_Active.png in Resources */ = {isa = PBXBuildFile; fileRef = 92533A001F59703E00662D2D /* Ticket_icn_Active.png */; };
 		92534D931F59704F00662D2D /* Ticket_icn_Active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92533A011F59703E00662D2D /* Ticket_icn_Active@2x.png */; };
 		92534D941F59704F00662D2D /* RimsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92533A031F59703E00662D2D /* RimsController.m */; };
@@ -7382,7 +7376,6 @@
 		92532B671F59703700662D2D /* RCRDiscounttogglebtnright.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RCRDiscounttogglebtnright.png; sourceTree = "<group>"; };
 		92532B681F59703700662D2D /* RCRDiscounttogglebtnrightselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RCRDiscounttogglebtnrightselected.png; sourceTree = "<group>"; };
 		92532B691F59703700662D2D /* RCRDiscounttogglebtnselected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RCRDiscounttogglebtnselected@2x.png"; sourceTree = "<group>"; };
-		92532B6A1F59703700662D2D /* recallsectionheader@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recallsectionheader@2x.png"; sourceTree = "<group>"; };
 		92532B6B1F59703700662D2D /* RetailResto-addbtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RetailResto-addbtn@2x.png"; sourceTree = "<group>"; };
 		92532B6C1F59703700662D2D /* RetailResto-addbtnforpatch@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RetailResto-addbtnforpatch@2x.png"; sourceTree = "<group>"; };
 		92532B6D1F59703700662D2D /* RetailResto-department@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RetailResto-department@2x.png"; sourceTree = "<group>"; };
@@ -7699,7 +7692,6 @@
 		92532CAE1F59703800662D2D /* offlinebtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "offlinebtn@2x.png"; sourceTree = "<group>"; };
 		92532CAF1F59703800662D2D /* offlinebtnselected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "offlinebtnselected@2x.png"; sourceTree = "<group>"; };
 		92532CB01F59703800662D2D /* patch@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "patch@2x.png"; sourceTree = "<group>"; };
-		92532CB11F59703800662D2D /* plusicon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plusicon@2x.png"; sourceTree = "<group>"; };
 		92532CB21F59703800662D2D /* plusiconselected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plusiconselected@2x.png"; sourceTree = "<group>"; };
 		92532CB31F59703800662D2D /* profilebtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profilebtn@2x.png"; sourceTree = "<group>"; };
 		92532CB41F59703800662D2D /* profilebtnselected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profilebtnselected@2x.png"; sourceTree = "<group>"; };
@@ -8345,7 +8337,6 @@
 		92532F621F59703900662D2D /* lockicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lockicon.png; sourceTree = "<group>"; };
 		92532F631F59703900662D2D /* loginbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginbox.png; sourceTree = "<group>"; };
 		92532F641F59703900662D2D /* plane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plane.png; sourceTree = "<group>"; };
-		92532F651F59703900662D2D /* retaillogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = retaillogo.png; sourceTree = "<group>"; };
 		92532F661F59703900662D2D /* signin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signin.png; sourceTree = "<group>"; };
 		92532F671F59703900662D2D /* signinselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signinselected.png; sourceTree = "<group>"; };
 		92532F681F59703900662D2D /* signup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signup.png; sourceTree = "<group>"; };
@@ -8355,7 +8346,6 @@
 		92532F6D1F59703900662D2D /* lockicon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lockicon@2x.png"; sourceTree = "<group>"; };
 		92532F6E1F59703900662D2D /* loginbox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loginbox@2x.png"; sourceTree = "<group>"; };
 		92532F6F1F59703900662D2D /* plane@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plane@2x.png"; sourceTree = "<group>"; };
-		92532F701F59703900662D2D /* retaillogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "retaillogo@2x.png"; sourceTree = "<group>"; };
 		92532F711F59703900662D2D /* signin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signin@2x.png"; sourceTree = "<group>"; };
 		92532F721F59703900662D2D /* signinselected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signinselected@2x.png"; sourceTree = "<group>"; };
 		92532F731F59703900662D2D /* signup@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signup@2x.png"; sourceTree = "<group>"; };
@@ -9603,7 +9593,6 @@
 		925334B31F59703C00662D2D /* btn_menu8_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_menu8_selected.png; sourceTree = "<group>"; };
 		925334B41F59703C00662D2D /* btn_menu9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_menu9.png; sourceTree = "<group>"; };
 		925334B51F59703C00662D2D /* btn_menu9_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_menu9_selected.png; sourceTree = "<group>"; };
-		925334B61F59703C00662D2D /* btnenter_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnenter_home.png; sourceTree = "<group>"; };
 		925334B71F59703C00662D2D /* EllipseDicLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EllipseDicLogo.png; sourceTree = "<group>"; };
 		925334BA1F59703C00662D2D /* tip_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tip_icon@2x.png"; sourceTree = "<group>"; };
 		925334BB1F59703C00662D2D /* transactionApprovalIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "transactionApprovalIcon@2x.png"; sourceTree = "<group>"; };
@@ -10757,7 +10746,6 @@
 		925339FB1F59703E00662D2D /* syncselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = syncselected.png; sourceTree = "<group>"; };
 		925339FC1F59703E00662D2D /* syncselected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "syncselected@2x.png"; sourceTree = "<group>"; };
 		925339FD1F59703E00662D2D /* TopNotificationIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TopNotificationIcon@2x.png"; sourceTree = "<group>"; };
-		925339FE1F59703E00662D2D /* Ticket_icn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ticket_icn.png; sourceTree = "<group>"; };
 		92533A001F59703E00662D2D /* Ticket_icn_Active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ticket_icn_Active.png; sourceTree = "<group>"; };
 		92533A011F59703E00662D2D /* Ticket_icn_Active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ticket_icn_Active@2x.png"; sourceTree = "<group>"; };
 		92533A021F59703E00662D2D /* RimsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RimsController.h; sourceTree = "<group>"; };
@@ -15707,7 +15695,6 @@
 				92532B671F59703700662D2D /* RCRDiscounttogglebtnright.png */,
 				92532B681F59703700662D2D /* RCRDiscounttogglebtnrightselected.png */,
 				92532B691F59703700662D2D /* RCRDiscounttogglebtnselected@2x.png */,
-				92532B6A1F59703700662D2D /* recallsectionheader@2x.png */,
 				92532B6B1F59703700662D2D /* RetailResto-addbtn@2x.png */,
 				92532B6C1F59703700662D2D /* RetailResto-addbtnforpatch@2x.png */,
 				92532B6D1F59703700662D2D /* RetailResto-department@2x.png */,
@@ -16101,7 +16088,6 @@
 				92532CAE1F59703800662D2D /* offlinebtn@2x.png */,
 				92532CAF1F59703800662D2D /* offlinebtnselected@2x.png */,
 				92532CB01F59703800662D2D /* patch@2x.png */,
-				92532CB11F59703800662D2D /* plusicon@2x.png */,
 				92532CB21F59703800662D2D /* plusiconselected@2x.png */,
 				92532CB31F59703800662D2D /* profilebtn@2x.png */,
 				92532CB41F59703800662D2D /* profilebtnselected@2x.png */,
@@ -17059,7 +17045,6 @@
 				92532F621F59703900662D2D /* lockicon.png */,
 				92532F631F59703900662D2D /* loginbox.png */,
 				92532F641F59703900662D2D /* plane.png */,
-				92532F651F59703900662D2D /* retaillogo.png */,
 				92532F661F59703900662D2D /* signin.png */,
 				92532F671F59703900662D2D /* signinselected.png */,
 				92532F681F59703900662D2D /* signup.png */,
@@ -17076,7 +17061,6 @@
 				92532F6D1F59703900662D2D /* lockicon@2x.png */,
 				92532F6E1F59703900662D2D /* loginbox@2x.png */,
 				92532F6F1F59703900662D2D /* plane@2x.png */,
-				92532F701F59703900662D2D /* retaillogo@2x.png */,
 				92532F711F59703900662D2D /* signin@2x.png */,
 				92532F721F59703900662D2D /* signinselected@2x.png */,
 				92532F731F59703900662D2D /* signup@2x.png */,
@@ -18959,7 +18943,6 @@
 				925334B31F59703C00662D2D /* btn_menu8_selected.png */,
 				925334B41F59703C00662D2D /* btn_menu9.png */,
 				925334B51F59703C00662D2D /* btn_menu9_selected.png */,
-				925334B61F59703C00662D2D /* btnenter_home.png */,
 				925334B71F59703C00662D2D /* EllipseDicLogo.png */,
 			);
 			path = TabImages;
@@ -20911,7 +20894,6 @@
 				925338561F59703D00662D2D /* ManualEntryImages */,
 				9253388D1F59703D00662D2D /* New_Footer_Button Images */,
 				925338941F59703D00662D2D /* new_images */,
-				925339FE1F59703E00662D2D /* Ticket_icn.png */,
 				92533A001F59703E00662D2D /* Ticket_icn_Active.png */,
 				92533A011F59703E00662D2D /* Ticket_icn_Active@2x.png */,
 			);
@@ -22446,7 +22428,6 @@
 				92533E941F59704000662D2D /* ic_arrow.png in Resources */,
 				92534D9C1F59704F00662D2D /* RIMImages.xcassets in Resources */,
 				925342081F59704300662D2D /* img_switchuser.png in Resources */,
-				925345C01F59704700662D2D /* retaillogo.png in Resources */,
 				925348AB1F59704900662D2D /* LINEATab4_NB_01.05.58.00.BIN in Resources */,
 				92533E6C1F59704000662D2D /* IC_menu_reconcile~IPad@2x.png in Resources */,
 				925343331F59704400662D2D /* cancletnx.png in Resources */,
@@ -22902,7 +22883,6 @@
 				925343C61F59704400662D2D /* CancelActive_pump@2x.png in Resources */,
 				92533FC71F59704100662D2D /* POSideMenuCustomCell.xib in Resources */,
 				925344F51F59704600662D2D /* dr_registerfilter@2x.png in Resources */,
-				925349B11F59704A00662D2D /* btnenter_home.png in Resources */,
 				92533AF91F59703E00662D2D /* Price_At_Pos_00Selected.png in Resources */,
 				925342A71F59704300662D2D /* SwitchTable_Slide_Menu.png in Resources */,
 				92533B3F1F59703E00662D2D /* done_btn.png in Resources */,
@@ -22963,7 +22943,6 @@
 				925342CA1F59704300662D2D /* Tender_printbtnselected@2x.png in Resources */,
 				925348231F59704900662D2D /* LINEAPad2L_NBAMBLRF_315.bin in Resources */,
 				925345561F59704600662D2D /* dashboardiconselected.png in Resources */,
-				925343891F59704400662D2D /* plusicon@2x.png in Resources */,
 				925344C81F59704600662D2D /* current_selected@2x.png in Resources */,
 				925347461F59704800662D2D /* LINEAPro4_XBAMBL_296.bin in Resources */,
 				92534D0B1F59704E00662D2D /* DeliveryPendingActive_ipad@2x.png in Resources */,
@@ -22995,7 +22974,6 @@
 				925344571F59704500662D2D /* current_selected.png in Resources */,
 				9253419D1F59704200662D2D /* bg_FormMiddle@2x.png in Resources */,
 				92533E6F1F59704000662D2D /* Icon_Stock-Control@2x.png in Resources */,
-				9253424C1F59704300662D2D /* recallsectionheader@2x.png in Resources */,
 				92534D1B1F59704E00662D2D /* priceActive.png in Resources */,
 				925342B51F59704300662D2D /* btn_50Currency_Active@2x.png in Resources */,
 				925342361F59704300662D2D /* RetailResto-swipforitems.png in Resources */,
@@ -23806,7 +23784,6 @@
 				925344791F59704500662D2D /* dr_helpbtn.png in Resources */,
 				92533E971F59704000662D2D /* ic_footer_holdselected.png in Resources */,
 				9253415D1F59704200662D2D /* RCR_Invoice_arrowleftselected.png in Resources */,
-				925345CA1F59704700662D2D /* retaillogo@2x.png in Resources */,
 				925347E21F59704900662D2D /* LINEATab4_XBAMBLR6_01.05.38.00.BIN in Resources */,
 				92533A211F59703E00662D2D /* button-16.wav in Resources */,
 				925346DC1F59704800662D2D /* swipselected@2x.png in Resources */,
@@ -25672,7 +25649,6 @@
 				92533F7C1F59704100662D2D /* po_menu_backbtn@2x.png in Resources */,
 				92533F431F59704100662D2D /* rim_backbtnselected@2x.png in Resources */,
 				9253446A1F59704500662D2D /* dr_centralizedZZ_selected.png in Resources */,
-				92534D901F59704F00662D2D /* Ticket_icn.png in Resources */,
 				925344AC1F59704500662D2D /* void.png in Resources */,
 				92534C6A1F59704D00662D2D /* btn_AddItemCancel_active@2x.png in Resources */,
 				925347DD1F59704900662D2D /* LINEATab4_NBPMR6HD_01.05.38.00.BIN in Resources */,
