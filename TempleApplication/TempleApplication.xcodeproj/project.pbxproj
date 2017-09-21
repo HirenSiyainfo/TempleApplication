@@ -4786,6 +4786,7 @@
 		9B1903A61F5935D600F37C71 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B1903A51F5935D600F37C71 /* main.m */; };
 		9B3BFA791F70F7FE0006EC93 /* emailReceipt_Temple.html in Resources */ = {isa = PBXBuildFile; fileRef = 9B3BFA781F70F7FE0006EC93 /* emailReceipt_Temple.html */; };
 		9B3BFA7D1F7124710006EC93 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B3BFA7C1F7124710006EC93 /* Images.xcassets */; };
+		9BE74D6B1F73EA34009CC37F /* SankatMochanLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BE74D6A1F73EA34009CC37F /* SankatMochanLogo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -10891,6 +10892,7 @@
 		9B1903B81F5935D600F37C71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B3BFA781F70F7FE0006EC93 /* emailReceipt_Temple.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = emailReceipt_Temple.html; sourceTree = "<group>"; };
 		9B3BFA7C1F7124710006EC93 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9BE74D6A1F73EA34009CC37F /* SankatMochanLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SankatMochanLogo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -22182,6 +22184,7 @@
 			isa = PBXGroup;
 			children = (
 				9B3BFA7C1F7124710006EC93 /* Images.xcassets */,
+				9BE74D6A1F73EA34009CC37F /* SankatMochanLogo.png */,
 				92531E481F596FF600662D2D /* frameWork */,
 				92531E371F596FD300662D2D /* libraries */,
 				92531E4F1F59703200662D2D /* RapidRMS */,
@@ -24381,6 +24384,7 @@
 				92533B511F59703E00662D2D /* rcr_dropselected.png in Resources */,
 				92534ABD1F59704C00662D2D /* WeightScaleSetupCell_iPad.xib in Resources */,
 				92533F0B1F59704100662D2D /* me_bg.png in Resources */,
+				9BE74D6B1F73EA34009CC37F /* SankatMochanLogo.png in Resources */,
 				92533A351F59703E00662D2D /* bottomrightbtn@2x.png in Resources */,
 				92534CBF1F59704E00662D2D /* DatewiseActive@2x.png in Resources */,
 				92533BC81F59703E00662D2D /* Ticket_icn@2x.png in Resources */,

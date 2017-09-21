@@ -221,7 +221,7 @@
     html = [[NSBundle mainBundle] pathForResource:@"emailReceipt_Temple" ofType:@"html"];
     html = [NSString stringWithContentsOfFile:html encoding:NSUTF8StringEncoding error:nil];
    
-    NSString *fileURLString = [[[NSBundle mainBundle] URLForResource:@"zigzag" withExtension:@"png"] absoluteString];
+    NSString *fileURLString = [[[NSBundle mainBundle] URLForResource:@"SankatMochanLogo" withExtension:@"png"] absoluteString];
    
     html = [html stringByReplacingOccurrencesOfString:@"$$IMG_HTML$$" withString:[NSString stringWithFormat:@"src=\"%@\"",fileURLString]];
     
